@@ -1,0 +1,225 @@
+*{    
+	margin:0;
+	padding:0;	
+}
+body{
+	font-size: 12px;
+	font-style: normal;
+	font-family: Verdana, Geneva, sans-serif;
+	background:#fafafa;
+	color:#8B8B8B;
+}
+.commanBgColor{
+	background-color:#e4e4e4;
+	background-color:#d68f51;
+	background-color:#f7941e;	
+	color:white;
+}
+.commanFontColor{
+	color:#f7941e;
+}
+.checkOutBody{
+	width: 600px;
+	height: 430px;
+	margin: 0 auto;	
+}
+.banner{
+	width:100%;
+	height:50px;
+	margin-top:10px;
+	border-radius: 4px;
+	background-image:url('../images/citrusBanner.gif');
+	background-size: cover;
+	box-shadow: 0px 0px 5px #c8c8c8;
+	position:relative;
+	behavior: url('css/PIE.htc');
+}
+/* `````````````````````````box```````````````````````` */
+.boxMaintainer{
+	margin:13px 0;
+	width:100%;
+	border-radius: 4px;
+	background-color:white;
+	box-shadow: 0px 0px 5px #c8c8c8;
+	behavior: url('css/PIE.htc');
+}
+.topSpace{
+	margin-top:25px;
+}
+.boxTitle{
+	width:100%;
+	border-radius: 4px;		
+}
+.boxTitleTxt{
+	width:100%;
+	text-indent:15px;
+	font-size:14px;
+	font-weight:bold;
+	padding:3px 0;
+}
+
+/* `````````````````````````Go Back ```````````````````````` */
+.goBackBox{
+	position: absolute;
+	font-size: 13px;
+	top: 51px;
+	border: 1px solid #E4E4E4;
+	background: white;
+    border-top-width: 0px;
+    width: 120px;
+    text-align: center;
+    border-radius: 15px 0 15px 0;
+    right: 0;
+    cursor: pointer;
+	behavior: url('css/PIE.htc');
+}
+.goBackBox label{	
+    margin-right: 5px;
+	cursor: pointer;
+}
+.goBackBox i{	
+    font-size: 15px;
+}
+.goBackBox label:hover  + i{	
+    color:#f7941e;
+}
+.goBackBox i:hover{	
+    color:#f7941e;
+}
+/* `````````````````````````User Details ```````````````````````` */
+.userDetailsSection{
+	padding:5px 0 10px;
+}
+.userDetailsBlock{
+	width: 92%;
+	margin: 0 4%;
+	border-bottom: 1px solid #E4E4E4;
+}
+.userDetails{
+	font-size: 13px;
+	padding: 4px 0;
+	display: inline-block;
+}
+.userDetailsLabel{
+	margin:0 5px;
+	font-weight:bold;
+}
+.ViewMoreDetails{
+	width: 92%;
+	margin: 0 4%;
+	font-size:12px;
+	text-align: center;
+	padding: 8px 0 0;
+}
+
+/* ````````````````````````` Tabs ```````````````````````` */
+.checkoutMaintainer{
+	width:100%;
+	position:relative;
+	border-radius: 4px;
+	height:400px;
+	behavior: url('css/PIE.htc');
+}
+.checkoutUl{
+	position:relative;
+	text-align:center;
+}
+.checkoutLi{
+	list-style-type: none;
+	display: inline-block;
+	width: 65px
+}
+.tabLabel{
+	width: 69px;
+	height: 60px;
+	display: inline-block;
+	border-left: 1px solid rgba(1,1,1,0.1);
+	cursor:pointer;
+}
+.tabSpan{
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 13px;
+}
+.icon{
+	display:none !important;
+	margin-left:20px;
+}
+.checkoutContainerBox{
+	width:100%;
+	height:200px;
+	border-top:1px solid #E4E4E4;
+	position:absolute;
+	left:0;
+	 margin-top: -4px;
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]{
+	position:absolute;
+	opacity:0;
+	filter: alpha(opacity=0);
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label{
+	border-bottom:4px solid #f7941e;
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >span{
+	color:#f7941e;
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >i{
+	color:#f7941e;
+	font-size: 17px;
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]  ~ div{
+	display:none;
+}
+.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked:not(:disabled)  ~ div{
+	display:block;
+}
+@media screen and (max-width: 620px) {
+    .checkOutBody{
+		width: 100%;
+	}
+	.checkoutLi{
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+	}
+	.tabLabel{
+		display: block;
+		width: 100%;
+		height:40px;
+		text-align:left;
+		background-color:#F7F7F7;
+		-moz-box-shadow:    inset  0  0px 8px -8px #696868, 
+							inset  0 -5px 8px -8px #696868;
+		-webkit-box-shadow: inset  0  0px 8px -8px #696868, 
+							inset  0 -5px 8px -8px #696868;
+		 box-shadow:        inset  0  0px 8px -8px #696868, 
+							inset  0 -5px 8px -8px #696868;
+	}
+	.tabSpan{
+		display:inline-block;
+	}
+	.icon{
+		display:inline-block !important;;
+	}
+	.checkoutContainerBox{
+		position:static;
+	}
+	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label{
+		box-shadow: inset 0 0 0 0 #696868, 
+					inset 0 0 0 0 #696868;
+		border-bottom:4px solid #f7941e;
+		background-color:white;
+	}
+	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >span{
+		font-size: 16px;
+	}
+	.txtIndent{
+		margin-left:15px;
+	}
+	.checkoutMaintainer{
+		height:100vh;
+	}
+}
+
