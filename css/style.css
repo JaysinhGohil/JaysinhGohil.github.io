@@ -20,7 +20,6 @@ body{
 }
 .checkOutBody{
 	width: 600px;
-	height: 430px;
 	margin: 0 auto;	
 }
 .banner{
@@ -51,11 +50,26 @@ body{
 	border-radius: 4px;		
 }
 .boxTitleTxt{
+	position:relative;
 	width:100%;
 	text-indent:15px;
 	font-size:14px;
 	font-weight:bold;
-	padding:3px 0;
+	padding:5px 0;
+}
+.boxTitleEdit{
+	position: absolute;
+	right: 10px;
+}
+.edit{
+	font-size: 12px;
+	cursor: pointer;
+}
+.edit:hover{
+	color:#f4f4f4;
+}
+.fa-pencil{
+	margin-right: 8px;
 }
 
 /* `````````````````````````Go Back ```````````````````````` */
@@ -88,12 +102,11 @@ body{
 }
 /* `````````````````````````User Details ```````````````````````` */
 .userDetailsSection{
-	padding:5px 0 10px;
+	padding:5px 0;
 }
 .userDetailsBlock{
 	width: 92%;
 	margin: 0 4%;
-	border-bottom: 1px solid #E4E4E4;
 }
 .userDetails{
 	font-size: 13px;
@@ -109,7 +122,6 @@ body{
 	margin: 0 4%;
 	font-size:12px;
 	text-align: center;
-	padding: 8px 0 0;
 }
 
 /* ````````````````````````` Tabs ```````````````````````` */
@@ -221,5 +233,67 @@ body{
 	.checkoutMaintainer{
 		height:100vh;
 	}
+}
+
+
+
+/*header section */
+div.header{
+display:none;
+height: auto;
+width: 570px;
+border-bottom: none;
+text-align: center;
+}
+div.header > div{
+	width: 95%;
+	padding-top: 14px;
+	text-align:center;
+}
+div.header > div >table{
+	margin:0px auto;
+	text-align:left;
+	font-family: tahoma;
+	font-size: 13px;
+}
+div.header > div >table td{ 
+	height: 40px;
+	padding-left:5px;
+	color:gray;
+	/* vertical-align: middle; */
+}
+div.header > div >table td  p{
+	margin:0px 0px 0px 0px;
+}
+div.header > div >table td input{
+	text-indent: 10px;
+	border: 2px solid #eeeeee;
+	border-radius: 5px;
+	border-color: #eeeeee;
+	color: #999999;
+	width:100%;
+	height: 30px;
+	font-family: tahoma;
+	font-size: 14px;
+}
+div.header > div >table td select{
+	border: 2px solid #eeeeee;
+	border-radius: 7px;
+	border-color: #eeeeee;
+	color: #999999;
+	margin: -5px;
+	outline: 0;
+	width: 102%;
+	height: 35px;
+	text-indent: 10px;
+}
+div.header > div >table td input:focus{
+	border-color: #C8C8C8;
+	outline: 0;
+}
+div.header > div >table tr td:first-child.paramName{
+	text-align: right;
+	padding-right: 18px;
+	font-weight:bold;
 }
 
