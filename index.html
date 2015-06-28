@@ -21,7 +21,7 @@
 					<p class="boxTitleTxt">Consumer Details
 						<label class="boxTitleEdit">
 							<span class="edit">
-								<i class="fa fa-pencil"></i>Edit
+								<i class="fa fa-eye viewIconSpace"></i>View
 							</span>
 						</label>
 					</p>
@@ -65,7 +65,12 @@
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Citrus_Accounts">
 							<label for="Citrus_Accounts" class="tabLabel" style="border-left-width:0px;">
-								<span class="tabSpan txtIndent">Citrus</span>
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
+								<i onclick="back()" class="fa fa-user icon"></i>
+								<span class="tabSpan txtIndent cIcon">
+									<img src="images/logo.png" />
+								</span>
+								<span class="tabSpan ">itrus</span>
 								<span class="tabSpan">Accounts</span>								
 							</label>
 							<div class="checkoutContainerBox">
@@ -73,8 +78,9 @@
 							</div>
 						</li>
 						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="Credit_Card" checked>
+							<input type="radio" name="paymentMode" id="Credit_Card">
 							<label for="Credit_Card" class="tabLabel">
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
 								<i class="fa fa-credit-card icon"></i>
 								<span class="tabSpan txtIndent">Credit</span>
 								<span class="tabSpan">Card</span>
@@ -313,6 +319,7 @@
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Debit_Card" >
 							<label for="Debit_Card" class="tabLabel">
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
 								<i class="fa fa-credit-card icon"></i>
 								<span class="tabSpan txtIndent">Debit</span>
 								<span class="tabSpan">Card</span>
@@ -522,6 +529,7 @@
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Net_Banking" >
 							<label for="Net_Banking" class="tabLabel">
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
 								<i class="fa fa-university icon"></i>
 								<span class="tabSpan txtIndent">Net</span>
 								<span class="tabSpan">Banking</span>
@@ -533,7 +541,8 @@
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="COD">
 							<label for="COD" class="tabLabel">
-								<i class="fa fa-money icon"></i>
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
+								<i class="fa fa-truck icon"></i>
 								<span class="tabSpan txtIndent">Cash On</span>
 								<span class="tabSpan">Delivery</span>
 							</label>
@@ -543,7 +552,9 @@
 						</li>
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="EMI" >
-							<label for="EMI" class="tabLabel">
+							<label for="EMI" class="tabLabel">	
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
+								<i class="fa fa-money icon"></i>
 								<span class="tabSpan txtIndent">EMI</span>
 								<span class="tabSpan">Payment</span>
 							</label>
@@ -554,6 +565,8 @@
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="IMPS">
 							<label for="IMPS" class="tabLabel">
+								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
+								<i class="fa fa-exchange icon"></i>
 								<span class="tabSpan txtIndent">IMPS</span>
 								<span class="tabSpan">Payment</span>
 							</label>
@@ -565,5 +578,41 @@
 				</div>
 			</div>
 		</div>
+		<script>		
+			$( document ).ready(function() {
+				if ( $(".checkOutBody").css('width') == '600px') {	
+					$("input[id='Credit_Card']").prop('checked', true);
+				}else{
+					closedTab();
+				}
+			});
+			var tabMng = 0;
+			$("input[name='paymentMode']").on("change",function(){
+				if($(".checkOutBody").css('width') != '600px'){
+					if( tabMng == 0){
+						$("label.tabLabel").css("display","none");
+						$(this).next().css("display","block");
+						$("label.tabLabel").removeClass("notSelected");
+						tabMng = 1;
+					}
+					else{
+						$("input[name='paymentMode']").prop('checked', false);
+						$("label.tabLabel").addClass("notSelected");
+						$("label.tabLabel").css("display","block");	
+						tabMng = 0;
+					}
+				}
+			});
+			$('.backIcon').click( function(){
+				if ( $(".checkOutBody").css('width') != '600px' && !$(this).hasClass( "notSelected" )) {	
+					closedTab();
+				}
+			});
+			function closedTab(){
+				$("input[name='paymentMode']").prop('checked', false);
+				$("label.tabLabel").css("display","block");
+				$("label.tabLabel").addClass("notSelected");
+			}
+		</script>
 	</body>
 </html>
