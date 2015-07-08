@@ -10,11 +10,15 @@
 	</head>	
 	<body>	
 		<div class="checkOutBody">
-			<div class="banner">
-				<label class="goBackBox">
-					<label>Go Back To</label>
-					<i class="fa fa-arrow-circle-up"></i>
-				</label>
+			<div class="banner"></div>
+			<div class="goBackToSection">
+				<a>
+					<div class="goBackBox">
+						<i class="fa fa-arrow-circle-left"></i>
+						<label>Go Back To:</label>
+						<label><span>www.rechargeitnow.com</span></label>
+					</div>
+				</a>
 			</div>
 			<div class="boxMaintainer topSpace">
 				<div class="boxTitle commanBgColor">
@@ -64,14 +68,12 @@
 					<ul class="checkoutUl">
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Citrus_Accounts">
-							<label for="Citrus_Accounts" class="tabLabel" style="border-left-width:0px;">
+							<label for="Citrus_Accounts" class="tabLabel" >
 								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
 								<i onclick="back()" class="fa fa-user icon"></i>
-								<span class="tabSpan txtIndent cIcon">
-									<img src="images/logo.png" />
-								</span>
-								<span class="tabSpan ">itrus</span>
-								<span class="tabSpan">Accounts</span>								
+								<span class="tabSpan "><span><img class="cTabIcon txtIndent" src="images/logo.png" /></span><span class="itrusInTab">itrus</span></span>
+								<span class="tabSpan">Accounts</span>
+								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
 							1
@@ -84,237 +86,89 @@
 								<i class="fa fa-credit-card icon"></i>
 								<span class="tabSpan txtIndent">Credit</span>
 								<span class="tabSpan">Card</span>
-							</label>
-							
-							
-
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							<div class="checkoutContainerBox">						
-							<div style="
-								width: 300px;    
-								margin: 20px auto;
-								background-color: rgb(250, 250, 250);
-								border-radius: 10px;
-								behavior: url('css/PIE.htc');
-								padding: 10px 0;
-							
-								margin-bottom: 10px;
-">
-							  
-							  
-							<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 15px;
-							
-">
-							  <input type="text" placeholder="Credit Card Number" style="
-								width: 100%;
-								height: 29px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-								text-indent: 10px;
-							">
-							</div><div style="
-								display: inline-block;
-								width: 90%;
-							
-								margin-bottom: 15px;
-								position: relative;
-								height: 30px;
-">
-							  <select style="
-								width: 50px;
-								border: 1px solid rgba(1,1,1,0.1);
-								color: rgb(182, 182, 182);
-								padding: 6px 0;
-								border-radius: 10px 0 0 10px;
-							
-								position: absolute;
-								left: 2px;
-">
-							  <option>MM</option>
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
-							  <option>6</option>
-							  <option>7</option>
-							  <option>8</option>
-							  <option>9</option>
-							  <option>10</option>
-							  <option>11</option>
-							  <option>12</option>  
-							  </select><select style="
-								width: 50px;
-								border: 1px solid rgba(1,1,1,0.1);
-								color: rgb(182, 182, 182);
-								padding: 6px 0;
-								border-radius: 0 10px 10px 0;
-								margin-left: -1px;
-								outline: 0;
-							
-								position: absolute;
-								left: 52px;
-">
-							  <option>YY</option>
-							  <option>15</option>
-							  <option>16</option>
-							  <option>17</option>
-							  <option>18</option>
-							  <option>19</option>
-							  <option>20</option>
-							  <option>21</option>
-							  <option>22</option>
-							  <option>23</option>
-							  <option>24</option>
-							  <option>25</option>
-							  <option style="
-								border: 2px solid rgba(1,1,1,0.1);
-							">26</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-							<option>32</option>
-							<option>33</option>
-							<option>34</option>
-							<option>35</option>
-							<option>36</option>
-							<option>37</option>
-							<option>38</option>
-							<option>39</option>
-							<option>40</option>
-							<option>41</option>
-							<option>42</option>
-							<option>43</option>
-							<option>44</option>
-							<option>45</option>
-							<option>46</option>
-							<option>47</option>
-							<option>48</option>
-							<option>49</option>
-							<option>50</option>  
-							  </select>
-<span style="
-    display: inline-block;
-    height: 25px;
-    width: 46px;    
-    background-image: url('./images/icon-cvc.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;    -moz-background-size: cover;    -o-background-size: cover;    
-    background-size: 40px;
-    position: absolute;
-    top: 3px;
-    margin-left: 15px;
-    background-position: center;
-"></span><input type="text" style="
-								width: 25%;
-								height: 30px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-							
-								position: absolute;
-								right: -1px;
-								text-align: center;
-" placeholder="CVV">
-
-							</div>
-
-
-<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 10px;
-							">
-							  <input placeholder="Card Holder Name" type="text" style="
-								width: 100%;
-								height: 30px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-								text-indent: 10px;
-							">
-							</div>
-							  
-							</div>
-
-<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 15px;
-							
-								margin-top: 10px;
-">
-  <button class="pay" style="
-    text-align: center;    
-    width: 298px;    padding: 7px 0;    border: none;    border-radius: 5px;    color: white;    font-size: 16px;    cursor: pointer;    font-weight: normal;    display: inline-block;    background: -webkit-linear-gradient(#fdc942 ,#f75b04);    background: -o-linear-gradient(#fdc942 ,#f75b04);    background: -moz-linear-gradient(#fdc942 ,#f75b04);    background: linear-gradient(#fdc942 ,#f75b04);    background-color: orange;
-">
-<span>Pay</span>
-<span style="
-    margin: 0 0 0 5px;
-"><i class="fa fa-inr"></i></span>
-<span>1.00</span>
-</button>
-							  
-							</div>
-<div style="
-								display: inline-block;
-								width: 298px;
-							
-								text-align: left;
-								font-size: 13px;
-								text-align: center;
-">
-	<i class="fa fa-check-square" style="
-    margin-right: 5px;
-"></i><span style="
-    font-size: 11px;
-">Save this card for faster payment experience</span>						  
-  </div></div>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-						
+								<h1 class="triangle"></h1>
+							</label>	
+							<div class="checkoutContainerBox">								
+								<p class="space" style="display:none;"></p>
+								<div class="cardContainerBox">
+									<div class="cardNumberContainer">
+										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
+									</div>
+									<div class="cardExpiryCvvContainer" >
+										<select class="cardExpiryMonthSelect" >
+											<option>MM</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select class="cardExpiryYearSelect">
+											<option>YYYY</option>
+											<option>2015</option>
+											<option>2016</option>
+											<option>2017</option>
+											<option>2018</option>
+											<option>2019</option>
+											<option>2020</option>
+											<option>2021</option>
+											<option>2022</option>
+											<option>2023</option>
+											<option>2024</option>
+											<option>2025</option>
+											<option>2026</option>
+											<option>2028</option>
+											<option>2029</option>
+											<option>2030</option>
+											<option>2031</option>
+											<option>2032</option>
+											<option>2033</option>
+											<option>2034</option>
+											<option>2035</option>
+											<option>2036</option>
+											<option>2037</option>
+											<option>2038</option>
+											<option>2039</option>
+											<option>2040</option>
+											<option>2041</option>
+											<option>2042</option>
+											<option>2043</option>
+											<option>2044</option>
+											<option>2045</option>
+											<option>2046</option>
+											<option>2047</option>
+											<option>2048</option>
+											<option>2049</option>
+											<option>2050</option>
+										</select>
+										<span class="cardCvvIcon"></span>
+										<input class="cardCvvInput" type="password" placeholder="CVV">
+									</div>
+									<div class="cardHolderContainerBox">
+										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
+									</div>
+								</div>
+								<div class="buttonContainerBox">
+									<button class="CheckoutPayButton" >
+										<span>Pay</span>
+										<span style="margin: 0 0 0 5px;">
+											<i class="fa fa-inr"></i>
+										</span>
+										<span>1.00</span>
+									</button>
+								</div>
+								<div class="quickPay">
+									<i class="fa fa-check-square"></i>
+									<span>Save this card for faster payment experience</span>						  
+								</div>
+							</div>								
 						</li>
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Debit_Card" >
@@ -323,208 +177,89 @@
 								<i class="fa fa-credit-card icon"></i>
 								<span class="tabSpan txtIndent">Debit</span>
 								<span class="tabSpan">Card</span>
+								<h1 class="triangle"></h1>
 							</label>
-
-							
-							
-							
-													
-							<div class="checkoutContainerBox">						
-							<div style="
-								width: 300px;    
-								margin: 20px auto;
-								background-color: rgb(250, 250, 250);
-								border-radius: 10px;
-								behavior: url('css/PIE.htc');
-								padding: 10px 0;
-							
-								margin-bottom: 10px;
-">
-							  
-							  
-							<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 15px;
-							
-">
-							  <input type="text" placeholder="Debit Card Number" style="
-								width: 100%;
-								height: 29px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-								text-indent: 10px;
-							">
-							</div><div style="
-								display: inline-block;
-								width: 90%;
-							
-								margin-bottom: 15px;
-								position: relative;
-								height: 30px;
-">
-							  <select style="
-								width: 50px;
-								border: 1px solid rgba(1,1,1,0.1);
-								color: rgb(182, 182, 182);
-								padding: 6px 0;
-								border-radius: 10px 0 0 10px;
-							
-								position: absolute;
-								left: 2px;
-">
-							  <option>MM</option>
-							  <option>1</option>
-							  <option>2</option>
-							  <option>3</option>
-							  <option>4</option>
-							  <option>5</option>
-							  <option>6</option>
-							  <option>7</option>
-							  <option>8</option>
-							  <option>9</option>
-							  <option>10</option>
-							  <option>11</option>
-							  <option>12</option>  
-							  </select><select style="
-								width: 50px;
-								border: 1px solid rgba(1,1,1,0.1);
-								color: rgb(182, 182, 182);
-								padding: 6px 0;
-								border-radius: 0 10px 10px 0;
-								margin-left: -1px;
-								outline: 0;
-							
-								position: absolute;
-								left: 52px;
-">
-							  <option>YY</option>
-							  <option>15</option>
-							  <option>16</option>
-							  <option>17</option>
-							  <option>18</option>
-							  <option>19</option>
-							  <option>20</option>
-							  <option>21</option>
-							  <option>22</option>
-							  <option>23</option>
-							  <option>24</option>
-							  <option>25</option>
-							  <option style="
-								border: 2px solid rgba(1,1,1,0.1);
-							">26</option>
-							<option>28</option>
-							<option>29</option>
-							<option>30</option>
-							<option>31</option>
-							<option>32</option>
-							<option>33</option>
-							<option>34</option>
-							<option>35</option>
-							<option>36</option>
-							<option>37</option>
-							<option>38</option>
-							<option>39</option>
-							<option>40</option>
-							<option>41</option>
-							<option>42</option>
-							<option>43</option>
-							<option>44</option>
-							<option>45</option>
-							<option>46</option>
-							<option>47</option>
-							<option>48</option>
-							<option>49</option>
-							<option>50</option>  
-							  </select>
-<span style="
-    display: inline-block;
-    height: 25px;
-    width: 46px;    
-    background-image: url('./images/icon-cvc.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;    -moz-background-size: cover;    -o-background-size: cover;    
-    background-size: 40px;
-    position: absolute;
-    top: 3px;
-    margin-left: 15px;
-    background-position: center;
-"></span><input type="text" style="
-								width: 25%;
-								height: 30px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-							
-								position: absolute;
-								right: -1px;
-								text-align: center;
-" placeholder="CVV">
-
-							</div>
-
-
-<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 10px;
-							">
-							  <input placeholder="Card Holder Name" type="text" style="
-								width: 100%;
-								height: 30px;
-								border: 0;
-								border: none;
-								border: 1px solid rgba(1,1,1,0.1);
-								border-radius: 5px;
-								text-indent: 10px;
-							">
-							</div>
-							  
-							</div>
-
-<div style="
-								display: inline-block;
-								width: 90%;
-								margin-bottom: 15px;
-							
-								margin-top: 10px;
-">
-  <button class="pay" style="
-    text-align: center;    
-    width: 298px;    padding: 7px 0;    border: none;    border-radius: 5px;    color: white;    font-size: 16px;    cursor: pointer;    font-weight: normal;    display: inline-block;    background: -webkit-linear-gradient(#fdc942 ,#f75b04);    background: -o-linear-gradient(#fdc942 ,#f75b04);    background: -moz-linear-gradient(#fdc942 ,#f75b04);    background: linear-gradient(#fdc942 ,#f75b04);    background-color: orange;
-">
-<span>Pay</span>
-<span style="
-    margin: 0 0 0 5px;
-"><i class="fa fa-inr"></i></span>
-<span>1.00</span>
-</button>
-							  
-							</div>
-<div style="
-								display: inline-block;
-								width: 298px;
-							
-								text-align: left;
-								font-size: 13px;
-								text-align: center;
-">
-	<i class="fa fa-check-square" style="
-    margin-right: 5px;
-"></i><span style="
-    font-size: 11px;
-">Save this card for faster payment experience</span>						  
-  </div></div>
-							
-							
-							
-							
-							
-							
-							
+							<div class="checkoutContainerBox">
+								<p class="space" style="display:none;"></p>
+								<div class="cardContainerBox">
+									<div class="cardNumberContainer">
+										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
+									</div>
+									<div class="cardExpiryCvvContainer" >
+										<select class="cardExpiryMonthSelect" >
+											<option>MM</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select class="cardExpiryYearSelect">
+											<option>YYYY</option>
+											<option>2015</option>
+											<option>2016</option>
+											<option>2017</option>
+											<option>2018</option>
+											<option>2019</option>
+											<option>2020</option>
+											<option>2021</option>
+											<option>2022</option>
+											<option>2023</option>
+											<option>2024</option>
+											<option>2025</option>
+											<option>2026</option>
+											<option>2028</option>
+											<option>2029</option>
+											<option>2030</option>
+											<option>2031</option>
+											<option>2032</option>
+											<option>2033</option>
+											<option>2034</option>
+											<option>2035</option>
+											<option>2036</option>
+											<option>2037</option>
+											<option>2038</option>
+											<option>2039</option>
+											<option>2040</option>
+											<option>2041</option>
+											<option>2042</option>
+											<option>2043</option>
+											<option>2044</option>
+											<option>2045</option>
+											<option>2046</option>
+											<option>2047</option>
+											<option>2048</option>
+											<option>2049</option>
+											<option>2050</option>
+										</select>
+										<span class="cardCvvIcon"></span>
+										<input class="cardCvvInput" type="password" placeholder="CVV">
+									</div>
+									<div class="cardHolderContainerBox">
+										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
+									</div>
+								</div>
+								<div class="buttonContainerBox">
+									<button class="CheckoutPayButton" >
+										<span>Pay</span>
+										<span style="margin: 0 0 0 5px;">
+											<i class="fa fa-inr"></i>
+										</span>
+										<span>1.00</span>
+									</button>
+								</div>
+								<div class="quickPay">
+									<i class="fa fa-check-square"></i>
+									<span>Save this card for faster payment experience</span>						  
+								</div>
+							</div>	
 						</li>
 						<li class="checkoutLi">
 							<input type="radio" name="paymentMode" id="Net_Banking" >
@@ -533,9 +268,82 @@
 								<i class="fa fa-university icon"></i>
 								<span class="tabSpan txtIndent">Net</span>
 								<span class="tabSpan">Banking</span>
+								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
-							4
+								<p style="  padding: 15px 0 9px 0;font-size: 13px;">
+									<!-- <i class="fa fa-hand-o-down" style="margin-right: 10px;"></i>Popular Banks -->
+								</p>
+								<div class="NBsortcutContainerBox">
+									<div class="NBsortcutBox" >
+										<input type="radio" name="bankSortcut" id="A" >
+										<label class="NBsortcutLabel" for="A">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg hdfc"></span>
+										</label>
+									</div>
+									<div class="NBsortcutBox" >
+										<input type="radio" name="bankSortcut" id="B" >
+										<label class="NBsortcutLabel" for="B">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg icici"></span>
+										</label>
+									</div>
+									<div class="NBsortcutBox" >
+										<input type="radio" name="bankSortcut" id="C" >
+										<label class="NBsortcutLabel" for="C">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg sbi"></span>
+										</label>
+									</div>
+									<div class="NBsortcutBox" >
+										<input type="radio" name="bankSortcut" id="D" >
+										<label class="NBsortcutLabel" for="D">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg bankofindia"></span>
+										</label>
+									</div>
+									<div class="NBsortcutBox mobileHideBank" >
+										<input type="radio" name="bankSortcut" id="E" >
+										<label class="NBsortcutLabel" for="E">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg federal"></span>
+										</label>
+									</div>
+									<div class="NBsortcutBox mobileHideBank" >
+										<input type="radio" name="bankSortcut" id="F" >
+										<label class="NBsortcutLabel" for="F">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-dot-circle-o"></i>
+											<span class="NBimg axis"></span>
+										</label>
+									</div>
+								</div>
+								<div class="NBselectBankBox">
+									<select class="NBselectBankDropDown">
+										<option>- - - Select other Banks from here - - -</option>
+										<option>SBI</option>
+										<option>HDFC</option>
+									</select>										
+								</div>
+								<div class="buttonContainerBox NBbtn">
+									<button class="CheckoutPayButton">
+										<span>Pay</span>
+										<span style="margin: 0 0 0 5px;">
+											<i class="fa fa-inr"></i>
+										</span>
+										<span>1.00</span>
+									</button>
+								</div>
+								<div class="quickPay">
+									<i class="fa fa-check-square"></i>
+									<span>Save this card for faster payment experience</span>						  
+								</div>
 							</div>
 						</li>
 						<li class="checkoutLi">
@@ -545,6 +353,7 @@
 								<i class="fa fa-truck icon"></i>
 								<span class="tabSpan txtIndent">Cash On</span>
 								<span class="tabSpan">Delivery</span>
+								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
 							5
@@ -557,6 +366,7 @@
 								<i class="fa fa-money icon"></i>
 								<span class="tabSpan txtIndent">EMI</span>
 								<span class="tabSpan">Payment</span>
+								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
 							6
@@ -569,6 +379,7 @@
 								<i class="fa fa-exchange icon"></i>
 								<span class="tabSpan txtIndent">IMPS</span>
 								<span class="tabSpan">Payment</span>
+								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
 							7
@@ -576,11 +387,29 @@
 						</li>
 					</ul>
 				</div>
+				<div style="width: 100%;text-align: center;-bottom: 1px;font-size: 14px;">
+					<i class="fa fa-lock" style="
+					display: inline-block;
+				"></i>
+					<span style="
+				">secured with</span>
+					<label style="
+				">
+						<img src="images/logo.png" style="
+					width: 12px;
+					vertical-align: middle;
+					margin-top: -2px;
+				">
+					</label>
+					<span style="
+					margin-left: -4px;
+				">itrus</span>
+				</div>
 			</div>
 		</div>
 		<script>		
 			$( document ).ready(function() {
-				if ( $(".checkOutBody").css('width') == '600px') {	
+				if ( $(".checkOutBody").css('width') == '650px') {	
 					$("input[id='Credit_Card']").prop('checked', true);
 				}else{
 					closedTab();
@@ -588,7 +417,7 @@
 			});
 			var tabMng = 0;
 			$("input[name='paymentMode']").on("change",function(){
-				if($(".checkOutBody").css('width') != '600px'){
+				if($(".checkOutBody").css('width') != '650px'){
 					if( tabMng == 0){
 						$("label.tabLabel").css("display","none");
 						$(this).next().css("display","block");
@@ -604,7 +433,7 @@
 				}
 			});
 			$('.backIcon').click( function(){
-				if ( $(".checkOutBody").css('width') != '600px' && !$(this).hasClass( "notSelected" )) {	
+				if ( $(".checkOutBody").css('width') != '650px' && !$(this).hasClass( "notSelected" )) {	
 					closedTab();
 				}
 			});
