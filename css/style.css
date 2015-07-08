@@ -6,13 +6,14 @@ body{
 	font-size: 12px;
 	font-style: normal;
 	font-family: Verdana, Geneva, sans-serif;
-	background-color:rgba(250, 250, 250, 0.2);
+	background-color: rgba(250, 250, 250, 1);
 	color:#8B8B8B;
 }
 .commanBgColor{
-	background-color: #FAFAFA;
+	/* background-color: #FAFAFA; */
+	background-color: white;
 	color: #999999;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
 }
 .commanFontColor{
 	color:#f7941e;
@@ -22,28 +23,24 @@ body{
 	margin: 0 auto;	
 }
 .banner{
-	width:100%;
-	height:50px;
-	margin-top:10px;
-	border-radius: 4px;
-	background-image:url('../images/citrusBanner.gif');
+	width: 100%;
+	height: 50px;
+	background-image: url('../images/citrusBanner.gif');
 	background-size: cover;
-	box-shadow: 0px 0px 5px #c8c8c8;
-	position:relative;
+	box-shadow: 0px 0px 1px #c8c8c8;
+	position: relative;
 	behavior: url('css/PIE.htc');
 }
 /* `````````````````````````box```````````````````````` */
 .boxMaintainer{
 	margin:13px 0;
 	width:100%;
-	border-radius: 4px;
 	background-color:white;
-	box-shadow: 0px 0px 5px #c8c8c8;
+	box-shadow: 0px 0px 1px #c8c8c8;
 	behavior: url('css/PIE.htc');
 }
 .boxTitle{
-	width:100%;
-	border-radius: 4px;		
+	width:100%;		
 }
 .boxTitleTxt{
 	position:relative;
@@ -138,7 +135,7 @@ body{
 .tabLabel{
 	position:relative;
 	width: 80px;
-	padding: 10px 0;
+	padding: 15px 0 5px;
 	display: inline-block;
 	cursor: pointer;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
@@ -459,7 +456,7 @@ body{
 	}
 	.tabSpan{
 		display:inline-block;
-		padding-top: 6px;
+		padding-top: 2px;
 	}
 	.icon{
 		display:inline-block !important;;
@@ -481,7 +478,7 @@ body{
 		display:none;
 		position: absolute;
 		left: 5px;
-		margin-top: 7px;
+		margin-top: 5px;
 		font-size: 14px;
 	}
 	.checkoutContainerBox{
