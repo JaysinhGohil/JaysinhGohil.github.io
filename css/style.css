@@ -435,12 +435,12 @@ body{
 	position: relative;
 	font-size: 13px;
 	margin: 12px auto 0px;
-	width: 90%;
+	width: 98%;
 	box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px 1px; 
 	background-color: white;
 }
 .EMItbl{
-	width: 100%;
+	width: 98%;
 	margin: 15px auto 0;
 	display: none;
 }
