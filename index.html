@@ -89,7 +89,7 @@
 								<h1 class="triangle"></h1>
 							</label>	
 							<div class="checkoutContainerBox">								
-								<p class="space" style="display:none;"></p>
+								<p class="space"></p>
 								<div class="cardContainerBox">
 									<div class="cardNumberContainer">
 										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
@@ -272,7 +272,7 @@
 							</label>
 							<div class="checkoutContainerBox">
 								<p style="  padding: 15px 0 9px 0;font-size: 13px;">
-									<!-- <i class="fa fa-hand-o-down" style="margin-right: 10px;"></i>Popular Banks -->
+									<i class="fa fa-hand-o-down" style="margin-right: 10px;"></i>Popular Banks
 								</p>
 								<div class="NBsortcutContainerBox">
 									<div class="NBsortcutBox" >
@@ -368,8 +368,194 @@
 								<span class="tabSpan">Payment</span>
 								<h1 class="triangle"></h1>
 							</label>
-							<div class="checkoutContainerBox">
-							6
+							<div class="checkoutContainerBox" style="height: 390px;">
+								<div class="EMIbankBox">
+									<div class="EMIbankMsgOne" >
+										  <span>Selected Bank:</span>
+										<span class="selectedBankForEMI" style="
+											color: #f7941e;
+										"></span><span class="EMIchangeBank" style="
+											position: absolute;
+											right: 20px;
+											cursor: pointer;
+											color: #f7941e;
+										"><span style="margin-left:5px;
+											color: #f7941e;
+										">[edit]</span><span></span></span>
+									</div>
+									<div class="EMIselectBankMsg" style="padding:15px 0;">
+										<i style="font-size: 18px;margin-left: -18px;" class="fa fa-hand-o-down"></i><span style="margin-left: 12px; ">Select your Bank for EMI</span>
+									</div>
+									<div class="EMIselectBankBox">
+										<select class="EMIselectBankDropDown">
+											<option>- - - Select Bank - - -</option>
+											<option value="SBI">SBI</option>
+											<option value="HDFC">HDFC</option>
+										</select>										
+									</div>
+								</div>
+								<div class="EMItbl">
+									<div class="EMItblHeader" >
+										<span class="EMItblHeaderTr">Months</span>
+										<span class="EMItblHeaderTr">Interest rate</span>
+										<span class="EMItblHeaderTr">Monthly Installment </span>
+										<span class="EMItblHeaderTr">Interest Paid</span>
+									</div>
+									<span>
+										<input id="a" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="a" class="EMItblTrBody">										
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">3</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+									<span>
+										<input id="b" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="b" class="EMItblTrBody">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">6</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+									<span>
+										<input id="c" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="c" class="EMItblTrBody">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">9</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+									<span>
+										<input id="d" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="d" class="EMItblTrBody">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">12</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+									<span>
+										<input id="e" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="e" class="EMItblTrBody">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">15</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+									<span>
+										<input id="f" class="EMItblRadio" type="radio" name="emiTblFild" >
+										<label for="f" class="EMItblTrBody">
+											<i class="fa fa-circle-o"></i>
+											<i class="fa fa-circle"></i>
+											<span class="EMItblTd">18</span>
+											<span class="EMItblTd">13.15</span>
+											<span class="EMItblTd">0.34</span>
+											<span class="EMItblTd">0.02</span>
+											<span class="EMIeditTbL">[edit]</span>
+										</label>
+									</span>
+								</div>
+								<div class="emiButtonContainerBox" style="display:none;margin-top: 25px;">
+									<button class="CheckoutPayButton">
+										<span>Checkout</span>
+										<span style="margin: 0 0 0 5px;">
+											<i class="fa fa-chevron-circle-right"></i>
+										</span>
+									</button>
+								</div>
+								<div class="emiCardContainerBox" style="display:none;">
+									<div class="cardNumberContainer">
+										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
+									</div>
+									<div class="cardExpiryCvvContainer" >
+										<select class="cardExpiryMonthSelect" >
+											<option>MM</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+											<option>11</option>
+											<option>12</option>
+										</select>
+										<select class="cardExpiryYearSelect">
+											<option>YYYY</option>
+											<option>2015</option>
+											<option>2016</option>
+											<option>2017</option>
+											<option>2018</option>
+											<option>2019</option>
+											<option>2020</option>
+											<option>2021</option>
+											<option>2022</option>
+											<option>2023</option>
+											<option>2024</option>
+											<option>2025</option>
+											<option>2026</option>
+											<option>2028</option>
+											<option>2029</option>
+											<option>2030</option>
+											<option>2031</option>
+											<option>2032</option>
+											<option>2033</option>
+											<option>2034</option>
+											<option>2035</option>
+											<option>2036</option>
+											<option>2037</option>
+											<option>2038</option>
+											<option>2039</option>
+											<option>2040</option>
+											<option>2041</option>
+											<option>2042</option>
+											<option>2043</option>
+											<option>2044</option>
+											<option>2045</option>
+											<option>2046</option>
+											<option>2047</option>
+											<option>2048</option>
+											<option>2049</option>
+											<option>2050</option>
+										</select>
+										<span class="cardCvvIcon"></span>
+										<input class="cardCvvInput" type="password" placeholder="CVV">
+									</div>
+									<div class="cardHolderContainerBox">
+										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
+									</div>
+								</div>
+								<div class="EmiButtonContainerBoxCheck" style="display:none;">
+									<button class="CheckoutPayButton" >
+										<span>Pay</span>
+										<span style="margin: 0 0 0 5px;">
+											<i class="fa fa-inr"></i>
+										</span>
+										<span>1.00</span>
+									</button>
+								</div>
 							</div>
 						</li>
 						<li class="checkoutLi">
@@ -413,7 +599,32 @@
 					$("input[id='Credit_Card']").prop('checked', true);
 				}else{
 					closedTab();
-				}
+				}				
+				$('body').on('change', '.EMIselectBankDropDown', function(){
+					$(".selectedBankForEMI").text($(".EMIselectBankDropDown").val());
+					$(".EMIselectBankMsg,.EMIselectBankDropDown,.EMItbl,.emiButtonContainerBox").hide();
+					$(".EMIbankMsgOne,.EMItbl,.EMItblTrBody").fadeIn(500);
+					$(".EMIeditTbL").css("visibility","hidden");
+					$(".fa-circle").css("visibility","visible");
+					$("input[name='emiTblFild']").attr("checked",false);
+				});
+				$("input[name='emiTblFild']").on("change",function(){
+					if($("input[name='emiTblFild']:checked")){$(".emiButtonContainerBox").fadeIn(500);}
+					else{$(".emiButtonContainerBox").hide();}
+				});
+				$(".CheckoutPayButton").on("click",function(){
+					$("input[name='emiTblFild'] ~ label,.emiButtonContainerBox").hide();
+					$("input[name='emiTblFild']:checked ~ label,.emiCardContainerBox,.EmiButtonContainerBoxCheck").show();
+					$(".EMIeditTbL").css("visibility","visible");
+					$(".fa-circle").css("visibility","hidden");
+				});
+				$(".EMIeditTbL").on("click",function(){						
+					$("input[name='emiTblFild']").attr("checked",false);
+					$(".EMIbankMsgOne,.EMItbl,.EMItblTrBody").fadeIn(500);
+					$(".EMIeditTbL").css("visibility","hidden");
+					$(".fa-circle").css("visibility","visible");					
+					$(".emiCardContainerBox,.EmiButtonContainerBoxCheck,.emiButtonContainerBox").hide();
+				});
 			});
 			var tabMng = 0;
 			$("input[name='paymentMode']").on("change",function(){
@@ -442,6 +653,10 @@
 				$("label.tabLabel").css("display","block");
 				$("label.tabLabel").addClass("notSelected");
 			}
+			$(".EMIchangeBank").click(function(){
+				$(".EMIselectBankMsg,.EMIselectBankDropDown").fadeIn(500);
+				$(".EMIbankMsgOne,.EMItbl,.emiCardContainerBox,.EmiButtonContainerBoxCheck,.emiButtonContainerBox").hide();
+			});
 		</script>
 	</body>
 </html>
