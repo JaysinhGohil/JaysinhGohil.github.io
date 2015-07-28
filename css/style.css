@@ -410,6 +410,43 @@ body{
 .NBselectBankDropDown:focus{
 	outline:0;
 }
+/*````````````````````````````````` COD ````````````````````````````````*/
+.codAddressBox{
+	margin: 30px auto;
+    width: 60%;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.codAddressTitle{
+	width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    text-align: left;
+    text-indent: 10px;
+    position: relative;
+}
+.codAddressTxt{
+    padding: 5px 0;
+    display: block;
+}
+.codAddressEdit{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    color: #f7941e;
+}
+.codAddress{
+	margin: 0 auto;
+    width: 93%;
+    text-align: left;
+    padding: 20px 0;
+}
+.codButtonContainerBox{
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
 /*````````````````````````````````` EMI ````````````````````````````````*/
 
 .EMIselectBankBox{
@@ -513,8 +550,10 @@ body{
 	text-align: left;
 	font-size: 13px;
 	text-align: center;
+	cursor:pointer;
 }
 .quickPay i{margin-right: 5px;}
+.quickPay .fa-square-o{display:none;}
 .quickPay span{font-size: 12px;}
 .backIcon{
 	display:none;
@@ -681,6 +720,11 @@ body{
 	}	
 	.emiCardContainerBox{
 		margin: 15px auto;
+	}
+/* COD */
+	.codAddressBox {
+		margin: 5px auto;
+		width: 85%;
 	}
 }
 @media screen and (max-width: 450px){

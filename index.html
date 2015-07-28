@@ -10,6 +10,7 @@
 	</head>	
 	<body>	
 		<div class="checkOutBody">
+			<input id="enableQuickPay" type="hidden" value="true" />
 			<div class="banner"></div>
 			<div class="goBackToSection">
 				<a>
@@ -165,7 +166,8 @@
 									</button>
 								</div>
 								<div class="quickPay">
-									<i class="fa fa-check-square"></i>
+									<i class="fa fa-check-square"></i>									
+									<i class="fa fa-square-o"></i>
 									<span>Save this card for faster payment experience</span>						  
 								</div>
 							</div>								
@@ -257,6 +259,7 @@
 								</div>
 								<div class="quickPay">
 									<i class="fa fa-check-square"></i>
+									<i class="fa fa-square-o"></i>
 									<span>Save this card for faster payment experience</span>						  
 								</div>
 							</div>	
@@ -342,6 +345,7 @@
 								</div>
 								<div class="quickPay">
 									<i class="fa fa-check-square"></i>
+									<i class="fa fa-square-o"></i>
 									<span>Save this Bank for faster payment experience</span>						  
 								</div>
 							</div>
@@ -356,7 +360,33 @@
 								<h1 class="triangle"></h1>
 							</label>
 							<div class="checkoutContainerBox">
-							5
+								<p class="spaceEmiTab"></p>
+								<div class="codBox">
+									<div class="codAddressBox">
+										<div class="codAddressTitle">
+											<span class="codAddressTxt">Delivery Address</span>
+											<label class="codAddressEdit">[edit]</label>
+										</div>
+										<div class="codAddress">A-204, Sun Grandeur, Patil Nagar, Bavdhan Sunarwadi, Pune, Maharashtra - 411021</div>																			
+										<div style="border-top: 1px solid rgba(0,0,0,0.1);padding: 5px 0;">
+											<span>
+												<i class="fa fa-hand-o-right"></i>
+											</span>
+											<span style="margin: 0 0 0 5px;">Place order of :</span>									
+											<span style="margin: 0 0 0 5px;color: #f7941e;">
+													<i class="fa fa-inr"></i>
+											</span>
+											<span style="color: #f7941e;">
+													1
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="codButtonContainerBox ">
+									<button class="CheckoutPayButton">
+										<span>Place Order</span>
+									</button>
+								</div>
 							</div>
 						</li>
 						<li class="checkoutLi">
@@ -377,9 +407,10 @@
 											color: #f7941e;
 										"></span><span class="EMIchangeBank" style="
 											position: absolute;
-											right: 20px;
+											right: 11px;
 											cursor: pointer;
 											color: #f7941e;
+											font-size:12px;
 										"><span style="margin-left:5px;
 											color: #f7941e;
 										">[edit]</span><span></span></span>
@@ -657,6 +688,18 @@
 			$(".EMIchangeBank").click(function(){
 				$(".EMIselectBankMsg,.EMIselectBankDropDown").fadeIn(500);
 				$(".EMIbankMsgOne,.EMItbl,.emiCardContainerBox,.EmiButtonContainerBoxCheck,.emiButtonContainerBox").hide();
+			});
+			$(".quickPay").click(function(){
+				if($("#enableQuickPay").val()=='true'){
+					$("#enableQuickPay").attr("value","false");
+					$(".fa-check-square").hide();
+					$(".fa-square-o").show();
+				}
+				else{
+					$("#enableQuickPay").attr("value","true");
+					$(".fa-square-o").hide();
+					$(".fa-check-square").show();
+				}
 			});
 		</script>
 	</body>
