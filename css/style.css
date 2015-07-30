@@ -121,7 +121,6 @@ body{
 	width:100%;
 	position:relative;
 	border-radius: 4px;
-	height: 63vh;
 	behavior: url('css/PIE.htc');	
 }
 .checkoutUl{
@@ -447,6 +446,58 @@ body{
 	margin-top: 15px;
 }
 
+/*````````````````````````````````` SAVED ACC ````````````````````````````````*/
+.savedAccBox{
+	height: 280px;
+	overflow-y: auto;
+}
+.savedAccCardBox{
+	margin-top: 10px;
+}
+.savedAccCard{
+	width: 230px;
+	height: 115px;
+	display: inline-block;
+	background-color: #E8E8E8;
+	border-radius: 10px;
+	behavior: url('css/PIE.htc');
+	text-align: left;
+	cursor: pointer;
+}
+.savedAccCardChipIcon{
+	display: inline-block;
+	width: 35px;
+	height: 25px;
+	background-color: #C1BEBE;
+	border-radius: 4px;
+	behavior: url('css/PIE.htc');
+	margin: 10px 20px;
+}
+.savedAccCardNumberDiv{
+	padding: 5px 0;
+}
+.savedAccMaskedCardNumber{
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: bold;
+}
+.savedAccUnMaskedCardNumber{
+	font-weight: bold;
+}
+.savedAccCardBottomDiv{
+	position: relative;
+	margin-top: 10px;
+}
+.savedAccCardHolderName{
+	display: inline-block;
+	margin-left: 10px;
+}
+.savedAccCardScheme{
+	width: 40px;
+	position: absolute;
+	right: 10px;
+	bottom: -5px;
+}
 /*````````````````````````````````` EMI ````````````````````````````````*/
 
 .EMIselectBankBox{
@@ -585,10 +636,46 @@ body{
 .checkoutMaintainer >ul >li > input[name="paymentMode"]:checked:not(:disabled)  ~ div{
 	display:block;
 }
-
-/* ````````````````````````` Payments section ```````````````````````` */
-
-
+input[name="savedAccName"] + label .cardFront{
+	display:block;
+}
+input[name="savedAccName"]:checked + label .cardFront{
+	display:none;
+}
+input[name="savedAccName"] + label .cardBack{
+	display:none;
+}
+input[name="savedAccName"]:checked + label .cardBack{
+	display:block;
+}
+/* ````````````````````````` footer ```````````````````````` */
+.footer{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.footerTxtBox{
+	display: inline-block;
+}
+.footerTxtBox i{
+	display: inline-block;
+}
+.footerCitrusIcon{
+	width: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.footerItrus{
+	margin-left: -4px;
+    color: #f7941e;
+}
+.footerIconBox{
+	display: block;
+    padding: 20px 0 5px;
+}
+.footerIcons{
+	width: 400px;
+}
 @media screen and (max-width: 620px) {
     .checkOutBody{
 		width: 100%;
@@ -650,6 +737,9 @@ body{
 		width: 100%;
 		margin-top:0;
 	}
+	.checkoutMaintainer {
+		height:auto !important;
+	}
 	.checkoutMaintainer >ul >li > input[name="paymentMode"] +label{
 		display:none
 	}
@@ -676,7 +766,6 @@ body{
 		margin-left:15px;
 	}
 	.checkoutMaintainer{
-		height:100vh;
 		margin:0 auto;
 		width:95%;
 		background-color: white;
@@ -691,6 +780,7 @@ body{
 		display:block !important;
 		padding:10px 0;
 	}
+	
 /* netBanking */
 	.NBsortcutContainerBox {
 		text-align: center;
@@ -725,6 +815,13 @@ body{
 	.codAddressBox {
 		margin: 5px auto;
 		width: 85%;
+	}
+/* footer */
+	.footer{
+		padding-top: 15px;
+	}
+	.footerIcons {
+		width: 340px;
 	}
 }
 @media screen and (max-width: 450px){
