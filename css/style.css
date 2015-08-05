@@ -64,33 +64,6 @@ body{
 .fa-pencil{
 	margin-right: 8px;
 }
-
-/* `````````````````````````Go Back ```````````````````````` */
-.goBackToSection{
-	text-align: center;
-	margin-top: 10px
-}
-.goBackBox{
-	font-size: 13px;
-	padding:3px 10px;
-	border: 1px solid #E4E4E4;
-	background: white;
-	display:inline-block;
-    text-align: center;
-    border-radius: 15px 0 15px 0;
-    cursor: pointer;
-	behavior: url('css/PIE.htc');
-}
-.goBackBox label{	
-    margin-right: 5px;
-	cursor: pointer;
-}
-.goBackBox:hover >i, .goBackBox:hover > label > span{
-	color:#f7941e;
-}
-.goBackBox i{	
-    font-size: 15px;
-}
 /* `````````````````````````User Details ```````````````````````` */
 .userDetailsSection{
 	display:none;
