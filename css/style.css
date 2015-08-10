@@ -1,875 +1,592 @@
-*{    
+*{    
 	margin:0;
 	padding:0;	
 }
 body{
-	font-size: 12px;
-	font-style: normal;
-	font-family: Verdana, Geneva, sans-serif;
-	background-color: rgba(250, 250, 250, 1);
-	color:#8B8B8B;
+	font: normal 10px tahoma;
 }
-.commanBgColor{
-	/* background-color: #FAFAFA; */
-	background-color: white;
-	color: #999999;
-	box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1);
+pre .coffeescript .javascript, pre .javascript .xml, pre .tex .formula, pre .xml .javascript, pre .xml .vbscript, pre .xml .css, pre .xml .cdata {
+opacity: .8;
 }
-.commanFontColor{
-	color:#f7941e;
-}
-.checkOutBody{
-	width: 650px;
-	margin: 0 auto;	
-}
-.banner{
-	width: 100%;
-	height: 50px;
-	background-image: url('../images/citrusBanner.gif');
-	background-size: cover;
-	box-shadow: 0px 0px 1px #c8c8c8;
-	position: relative;
-	behavior: url('css/PIE.htc');
-}
-/* `````````````````````````box```````````````````````` */
-.boxMaintainer{
-	margin:13px 0;
+#zeroBody{
+	margin:0px auto;
 	width:100%;
 	background-color:white;
-	box-shadow: 0px 0px 1px #c8c8c8;
-	behavior: url('css/PIE.htc');
 }
-.boxTitle{
-	width:100%;		
-}
-.boxTitleTxt{
-	position:relative;
-	width:100%;
-	text-indent:15px;
-	font-size:14px;
-	font-weight:bold;
-	padding: 4px 0;
-}
-.boxTitleEdit{
-	position: absolute;
-	right: 10px;
-}
-.edit{
-	font-size: 12px;
-	cursor: pointer;
-}
-.edit:hover{
-	color:#f4f4f4;
-}
-.fa-pencil{
-	margin-right: 8px;
-}
-/* `````````````````````````User Details ```````````````````````` */
-.userDetailsSection{
-	display:none;
-	padding:5px 0;
-}
-.userDetailsBlock{
-	width: 92%;
-	margin: 0 4%;
-}
-.userDetails{
-	font-size: 13px;
-	padding: 4px 0;
-	display: inline-block;
-}
-.userDetailsLabel{
-	margin:0 5px;
-	font-weight:bold;
-}
-.ViewMoreDetails{
-	width: 92%;
-	margin: 0 4%;
-	font-size:12px;
-	text-align: center;
-}
-
-/* ````````````````````````` Tabs ```````````````````````` */
-.checkoutMaintainer{
-	width:100%;
-	position:relative;
-	border-radius: 4px;
-	behavior: url('css/PIE.htc');	
-}
-.checkoutUl{
-	position:relative;
-	text-align:center;
-	width:100px;
-	text-align:left;
-}
-.checkoutLi{
-	list-style-type: none;
-	display: inline-block;
-}
-.tabLabel{
-	position:relative;
-	width: 80px;
+#zeroBody>div.header{
+	margin:0 auto;
+	width:1181px;	
 	padding: 15px 0 5px;
-	display: inline-block;
-	cursor: pointer;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-	margin-right: 3px;
 }
-.tabSpan{
-	display: block;
-	text-align: center;
-	font-size: 13px;
-}
-.cTabIcon{
-	width: 15px;
+#zeroBody>div.header>div{
+	width: 85px;
 	vertical-align: middle;
-	margin-top: -3px;
-	margin-right: 1px;
-}
-.itrusInTab{
-	color: #f7941e;
-}
-.icon{
-	display:none !important;
-	margin-left:20px;
-}
-.triangle{
-	display:none;
-	position: absolute;
-	bottom: 15px;
-	left: 81px;
-	width: 0px;
-	height: 0px;
-	border-style: solid;
-	border-color: transparent rgba(250, 250, 250, 0.78) transparent transparent;
-	border-width: 7.5px 15px 7.5px 0;
-	line-height: 0px;
-	_border-color: #000000;
-	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
-}
-.space{
-	display:block !important;
-	padding:5px 0;
-}
-.checkoutContainerBox{
-	width: 545%;
-	height: 350px;
-	position: absolute;
-	left: 96%;
-	top: 10px;
-	text-align:center;
-	border-radius: 12px;
-	background-color: rgba(250, 250, 250, 0.78);
-}
-
-/* ````````````````````````````card````````````````````````` */
-.cardContainerBox{
-	width: 300px;    
-	margin: 20px auto;
-	background-color: #E8E8E8;
-	border-radius: 10px;
-	behavior: url('css/PIE.htc');
-	padding: 10px 0;
-	margin-bottom: 10px;
-}
-.cardNumberContainer{
-	 display: inline-block;
-	 width: 90%;
-	 margin-bottom: 15px;
-}
-.cardNumberInput:focus, .cardExpiryMonthSelect:focus, .cardExpiryYearSelect:focus, .cardCvvInput:focus, .cardHolderInput:focus{
-	border: 2px solid rgba(1,1,1,0.2);
-	outline: 0;
-}
-.cardNumberInput{
-	width: 100%;
-	height: 29px;
-	border: 0;
-	border: none;
-	border: 2px solid rgba(1,1,1,0.1);
-	border-radius: 5px;
-	text-indent: 10px;
-}
-.cardExpiryCvvContainer{
-	 display: inline-block;
-	 width: 90%;
-	 margin-bottom: 15px;
-	 position: relative;
-	 height: 30px	
-}
-.cardExpiryMonthSelect{
-	width: 50px;
-	border: 2px solid rgba(1,1,1,0.1);
-	color: rgb(182, 182, 182);
-	padding: 6px 0;
-	border-radius: 10px 0 0 10px;
-	position: absolute;
-	left: 2px;	
-}
-.cardExpiryYearSelect{
-	width: 65px;
-	border: 2px solid rgba(1,1,1,0.1);
-	color: rgb(182, 182, 182);
-	padding: 6px 0;
-	border-radius: 0 10px 10px 0;
-	margin-left: -2px;
-	outline: 0;
-	position: absolute;
-	left: 52px;	
-}
-.cardCvvIcon{	
 	display: inline-block;
-	height: 25px;
-	width: 46px;    
-	background-image: url('../images/icon-cvc.png');
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;    
-	-moz-background-size: cover;    
-	-o-background-size: cover;    
-	background-size: 40px;
-	position: absolute;
-	top: 3px;
-	margin-left: 15px;
-	background-position: center;
 }
-.cardCvvInput{
-	width: 25%;
-	height: 30px;
-	border: 0;
-	border: none;
-	border: 2px solid rgba(1,1,1,0.1);
-	border-radius: 5px;
-	position: absolute;
-	right: -1px;
-	text-align: center;
-}
-.cardHolderContainerBox{
-	display: inline-block;
-	width: 90%;
-	margin-bottom: 10px;
-}
-.cardHolderInput{
-	width: 100%;
-	height: 30px;
-	border: 0;
-	border: none;
-	border: 2px solid rgba(1,1,1,0.1);
-	border-radius: 5px;
-	text-indent: 10px;
-}
-.buttonContainerBox{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	margin-top: 10px;
-}
-.emiButtonContainerBox{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	margin-top: 10px;
-}
-.EmiButtonContainerBoxCheck{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	margin-top: 10px;
-}
-.cardTypeSelect{
-	width: 160px;
-	border: 2px solid rgba(1,1,1,0.1);
-	color: rgb(182, 182, 182);
-	padding: 6px 0;
-	border-radius: 10px;
-	outline: 0;
-}
-.errorInput{
-	border:2px solid #ff9494;
-}
-.CheckoutPayButton{
-	text-align: center;    
-	width: 298px;    
-	padding: 7px 0;    
-	border: none;    
-	border-radius: 5px;    
-	color: white;    
-	font-size: 16px;    
-	cursor: pointer;    
-	font-weight: normal;    
-	display: inline-block;    
-	background: -webkit-linear-gradient(#fdc942 ,#f75b04);    
-	background: -o-linear-gradient(#fdc942 ,#f75b04);    
-	background: -moz-linear-gradient(#fdc942 ,#f75b04);    
-	background: linear-gradient(#fdc942 ,#f75b04);    
-	background-color: orange;
-}
-.CheckoutPayButton:focus{
-	outline:0;
-}
-
-/*````````````````````````````````` NB ````````````````````````````````*/
-.NBsortcutContainerBox{
-	text-align:left;
-	padding-bottom: 18px;
-	box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
-}
-.NBsortcutBox{
-	display: inline-block;
-	background-color: white;
-	width: 74px;
-	height: 80px;
-	margin-left: 12px;
-	position: relative;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-}
-#A, #B, #C, #D, #E, #F {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-}
-.NBsortcutLabel{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-}
-.NBsortcutLabel i{
-	position: absolute;
-	left: 32px;
-	top: 0px;
-	font-size: 15px;
-	color: rgba(0,0,0,0.3);
-}
-.NBsortcutLabel .fa-dot-circle-o{
-	color:orange;
-	display:none;
-}
-.NBimg{
-	position: absolute;
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	left: 20%;
-	top: 28%;
-	background-size: 50px;
-	background-repeat: no-repeat;
-}
-.hdfc{background-image:url(../images/hdfcBank.png);}
-.icici{background-image:url(../images/iciciBank.png);}
-.sbi{background-image:url(../images/sbiBank.png);}
-.bankofindia{background-image:url(../images/boiBank.png);}
-.federal{background-image:url(../images/federalBank.png);}
-.axis{background-image:url(../images/axisBank.png);}
-.NBsortcutBox input[name="bankSortcut"]:checked +label.NBsortcutLabel i.fa-circle-o{
-	display:none;
-}
-.NBsortcutBox input[name="bankSortcut"]:checked +label.NBsortcutLabel i.fa-dot-circle-o{
-	display:block;
-}
-.NBselectBankBox{
-	text-align: center;
-	padding: 15px;
-	margin-top: 10px;
-}
-.NBselectBankDropDown{
-	width: 250px;    
-	border: 2px solid rgba(1,1,1,0.1);    
-	color: rgb(182, 182, 182);    
-	padding: 6px 0;    
-	border-radius: 10px;
-	font-size: 13px;
-}
-.NBselectBankDropDown:focus{
-	outline:0;
-}
-/*````````````````````````````````` COD ````````````````````````````````*/
-.codAddressBox{
-	margin: 30px auto;
-    width: 60%;
-    background-color: white;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-.codAddressTitle{
-	width: 100%;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    text-align: left;
-    text-indent: 10px;
-    position: relative;
-}
-.codAddressTxt{
-    padding: 5px 0;
-    display: block;
-}
-.codAddressEdit{
-    position: absolute;
-    top: 2px;
-    right: 10px;
-    color: #f7941e;
-}
-.codAddress{
-	margin: 0 auto;
-    width: 93%;
-    text-align: left;
-    padding: 20px 0;
-}
-.codButtonContainerBox{
-	display: block;
-	width: 100%;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
-
-/*````````````````````````````````` SAVED ACC ````````````````````````````````*/
-.savedAccBox{
-	height: 280px;
-	overflow-y: auto;
-}
-.savedAccCardBox{
-	margin-top: 10px;
-}
-.savedAccCard{
-	width: 230px;
-	height: 115px;
-	display: inline-block;
-	background-color: #E8E8E8;
-	border-radius: 10px;
-	behavior: url('css/PIE.htc');
-	text-align: left;
-	cursor: pointer;
-}
-.savedAccCardChipIcon{
-	display: inline-block;
-	width: 35px;
-	height: 25px;
-	background-color: #C1BEBE;
-	border-radius: 4px;
-	behavior: url('css/PIE.htc');
-	margin: 10px 20px;
-}
-.savedAccCardNumberDiv{
-	padding: 5px 0;
-}
-.savedAccMaskedCardNumber{
-	display: inline-block;
-	margin-left: 10px;
-	font-weight: bold;
-}
-.savedAccUnMaskedCardNumber{
-	font-weight: bold;
-}
-.savedAccCardBottomDiv{
-	position: relative;
-	margin-top: 10px;
-}
-.savedAccCardHolderName{
-	display: inline-block;
-	margin-left: 10px;
-}
-.savedAccCardScheme{
-	width: 40px;
-	position: absolute;
-	right: 10px;
-	bottom: -5px;
-}
-/*````````````````````````````````` EMI ````````````````````````````````*/
-
-.EMIselectBankBox{
-	text-align: center;
-	margin-top: 10px;
-}
-.EMIselectBankDropDown {
-	width: 150px;
-	border: 2px solid rgba(1,1,1,0.1);
-	color: rgb(182, 182, 182);
-	padding: 6px 0;
-	border-radius: 10px;
-	font-size: 13px;
-}
-.EMIselectBankDropDown:focus{
-	outline:0;
-}
-.EMIbankMsgOne{
-	display:none;
-	padding: 4px 0px;
-	text-align: left;
-	text-indent: 15px;
-	position: relative;
-	font-size: 13px;
-	margin: 12px auto 0px;
-	width: 98%;
-	box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px 1px; 
-	background-color: white;
-}
-.EMItbl{
-	width: 98%;
-	margin: 15px auto 0;
-	display: none;
-}
-.EMItblHeader{background-color: rgb(232, 232, 232);}
-.EMItblHeaderTr{
-	display: inline-block;
-	width: 20%;
-	font-weight: bold;
+#zeroBody>div.header>h5{
+	width: 1081px;
+	padding: 22px 0;
+	border-bottom: 2px solid #9B9B9B;
+	border-left: 0px;
+	border-top: 0px;
 	vertical-align: top;
-	padding: 5px 0;
+	display: inline-block;
+	border-right: 0px;
+	margin-left: 10px;
+	text-align:left;
+	position: relative;
 }
-.EMItblTrBody{
-	border-bottom: 1px solid rgb(232, 232, 232);
-	display:block;
-	width:100%;
+#zeroBody>div.header>h5>a{
+	vertical-align: middle;
+	border-bottom: 2px solid #9B9B9B;
+	margin-right: 0px;
+	padding: 6px 0px;
+	border-left: 0px;
+	border-right: 0px;
+	color:#9B9B9B;
+	text-decoration:none;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#zeroBody>div.header>h5>a:hover,
+#zeroBody>div.header>h5>a.headerTabSelected{
+	border-bottom: 2px solid #fa9d03;
+	color:#fa9d03;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.section{
+	margin:0 auto;
+	width:1194px;	
 	position:relative;
 }
-.EMItblTrBody:hover{
-	background-color:white;
-}
-.EMItblTrBody:hover  .fa-circle-o{	
-	color:#f7941e;
-}
-.EMItblTrBody .fa-circle-o{
-	margin-left: -10px;
-	padding: 7px 0;
-}
-.EMItblTrBody .fa-circle{
-	display:none;
-	margin-left: -10px;
-	padding: 5px 0;
-	color:#f7941e;
-}
-.EMItblTd{
-	display: inline-block;
-	width: 20%;
-	vertical-align: top;
-	padding: 7px 0;
-}
-.EMItblRadio{
+.headerTab{
+	position: relative;
+	top: 16px;
+}div.prev{  	width: 40%;	float: left;	text-align: left;	overflow: hidden;	white-space: nowrap;	padding-left:40px;}div.next{  	width: 40%;	float: right;	text-align: right;	white-space: nowrap;	overflow: hidden;	padding-right:40px;}a.chapter{	font-size: 18px;	font-weight: normal;	color: #fa9d03;	margin-top: 10px;	text-decoration:none;}a.chapter:hover{	text-decoration:underline;}div.contentDataFooter{	display: inline-block;	width: 100%;	height: 50px;	vertical-align: middle;}
+/* ....................................................nav.............................................. */
+.nav{
+	background-color:#F0F2F4;
+	width:210px;	margin-top:0px;
+	border-radius:10px 0 0 10px;
 	position:absolute;
-	visibility:hidden;
-	left:0px;
+	border: 1px solid #cacdd3;
+	border-top: 1px solid rgba(156,165,181,0.25);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.65);
+	height: 99.9%;	min-height: 89vh;
 }
-.EMIeditTbL{
-	visibility:hidden;
+.nav>.navTitles{
+	margin: 18px 0 7px;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FA9D03;
+	padding-right: 25px;
+	padding-left: 10px;
+}
+.nav h1:nth-of-type(1) {
+	margin-top: 20px;
+}
+.nav ul a{
+	text-decoration: none;	color: #6292a3;
+}.nav ul a:active{	text-decoration: underline;	color: red;}
+.nav ul li{
+	position: relative;
+	margin:5px 0;
+	cursor: pointer;
+	list-style: none;
+	font-size:13px;
+	text-decoration:none;
+	box-shadow: 1px 0 rgba(156,165,181,0.08);
+}
+.nav ul li.visited { 	color:white;
+	padding:3px 0;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);	background:orange\9;
+}
+.nav ul li.visited:hover{ 
+	color:white;
+	text-decoration:none;
+}
+.nav ul li{
+	text-decoration:none;
+	color:#6292a3;
+}
+.nav ul li:hover{
+	text-decoration:underline;
+}
+.list{
+	text-indent:20px;
+}
+.subList{
+	text-indent:40px;
+}
+.superSubList{
+	text-indent:40px;
+}
+.superSubList2{
+	text-indent:80px;
+}.manuIconLogo{width:16px;height:16px;background:url(../images/navicons.png) 0px 10px;}
+/* ....................................................let's start Btn.............................................. */
+.startContent{
+	position: relative;
+	height: 130px;
+}
+.startOuterBtn{
+	width: 120px;
+	height: 120px;
+	box-shadow: 0px 0px 10px rgbA(1,1,1,0.2);
 	position: absolute;
-	right: 10px;
-	top: 5px;
-	display: inline-block;
-	color: #f7941e;
+	left: 50%;
+	margin-left: -60px;
+	border-radius: 125px;
+	cursor: pointer;
+	-webkit-animation: BgChange 1.5s infinite; /* Chrome, Safari, Opera */
+    animation: BgChange 1.5s infinite;
 }
 
-.emiCardContainerBox{
-	width: 300px;    
-	margin: 20px auto;
-	background-color: #E8E8E8;
-	border-radius: 10px;
-	behavior: url('css/PIE.htc');
-	padding: 10px 0;
-	margin-bottom: 10px;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes BgChange {
+    0% { box-shadow: 0px 0px 5px rgbA(1,1,1,0.2); }
+    50% { box-shadow: 0px 0px 25px rgbA(1,1,1,0.2); }
+    100% { box-shadow: 0px 0px 5px rgbA(1,1,1,0.2); }
 }
-.EMItblRadio:checked + .EMItblTrBody{ background-color:white;}
-.EMItblRadio:checked + .EMItblTrBody .fa-circle-o{ display:none;}
-.EMItblRadio:checked + .EMItblTrBody .fa-circle{ display:inline-block;}
-/*````````````````````````````````` Quick Pay ````````````````````````````````*/
-.quickPay{
-	display: inline-block;
-	width: 298px;
-	text-align: left;
-	font-size: 13px;
+
+/* Standard syntax */
+@keyframes BgChange {
+    0% { box-shadow: 0px 0px 5px rgbA(1,1,1,0.2); }
+    50% { box-shadow: 0px 0px 25px rgbA(1,1,1,0.2); }
+    100% { box-shadow: 0px 0px 5px rgbA(1,1,1,0.2); }
+}
+.startInnerBtn{
+	width: 100px;
+	height:100px;
+	box-shadow: 0px 0px 10px rgbA(1,1,1,0.2);
+	position: absolute;
 	text-align: center;
+	margin-top: 10px;
+	left: 50%;
+	margin-left: -50px;
+	border-radius: 125px;
+	cursor: pointer;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);  
+	background: -o-linear-gradient(#fdc942 ,#f75b04);  
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);  
+	background: linear-gradient(#fdc942 ,#f75b04);	background:orange\9; /* IE9 */
+	
+}
+.startBtnTxt{
+	display: inline-block;
+	color: white;
+	font-size: 15px;
+	padding-top: 28px;
+}
+/* ....................................................content header.............................................. */
+.content{	 
+	position: relative;
+	width: 82%;
+	margin-left: 205px;
+	border-radius:10px;
+	background:#ffffff;
+	border-radius:10px;
+	-webkit-box-shadow: -2px 0px 1px 0px rgba(0,0,0,0.2);
+	   -moz-box-shadow: -2px 0px 1px 0px rgba(0,0,0,0.2);
+	        box-shadow: -2px 0px 1px 0px rgba(0,0,0,0.2);
+}
+.embeddedform{
+	width :100%;	
+	border: 1px solid #cacdd3;
+	/* border-top: 1px solid rgba(156,165,181,0.25); */
+	border-radius:10px 10px 0 0;
+}
+.contentHeader{	
+	margin:0 auto;
+	width:85%;
+	height: 100px;
+}
+.contentHeader>h1{
+	font-size: 25px;
+	font-weight: normal;	
+	color:#fa9d03;
+	margin-top: 10px;
+}
+.contentHeader>p{
+	font-size: 13px;
+	line-height: 19px;
+	color: #6c767f;
+	margin: 4px 20px 0 0;	min-height:100vh;
+}
+.line{
+	height:1px;
+	background:rgba(0,0,0,.2);
+	margin:10px 0;
+}
+.lineGap{
+	height:10px;
+	background:rgba(0,0,0,.2);
+	margin:10px 0;
+}
+/* ....................................................content data.............................................. */
+.contentSection{
+	background:#fafafa;
+	width:100%;
+	border: 1px solid #cacdd3;
+	border-top: 1px solid rgba(156,165,181,0.25);
+	border-radius:0 0 10px 10px;
+}
+.contentData{
+	margin:0 auto;
+	width:85%;
+	padding-top:15px;
+}
+.contentData>p{
+	color:#666565;
+	margin-bottom: 20px;
+	font-size: 13px;
+	line-height: 19px;
+}
+.btn>button {
+	text-align: center;
+	width: 150px;
+	padding: 8px 0;
+	border: none;
+	color: white;
+	font-size: 16px;
+	border-radius: 7px;
+	cursor: pointer;
+	font-weight: normal;
+	display: inline-block;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);
+}
+.contentData>ol,.contentData>ul{
+	list-style-position: outside;
+	margin-left: 18px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	line-height: 19px;
+	color: #666565;
+}
+.contentData>ul{
+ list-style-position: outside;
+ line-height: 20px;
+}
+span.higelite{
+	background: #fa9d03;
+	color:white;
+	padding: 0 6px;
+	border-radius: 8px;
+	font-weight: bold !important;
+}span.higelite1{	background: #fa9d03;	color:white;    cursor:pointer;	padding: 4px 6px;	border-radius: 8px;    font-size:11px;	font-weight: bold !important;}
+code{
+	line-height: 15px;
+	background:white;
+}
+.contentData>span{
+	display: inline-block;
+	vertical-align: middle;
+}
+span>img{
+  margin : 25px 0; 
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+span>a>img.appIcon{
+	margin : 5px 0;
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+.ImgForParty{
+	margin: 15px 41px;
+	width: 80px;	 -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.ImgForParty2{
+	cursor:pointer;
+	margin: 20px;
+	width:115px;	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.ImgForParty2:hover{  
+ -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}.ImgForParty3 {  margin: 20px;  width: 115px;  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);}
+.contentData>h1{
+	margin: 10px 0 17px;
+	font-size: 19px;
+	font-weight:normal;
+	color: #646464;
+	}
+
+.contentData>h2{
+	margin: 10px 0 10px;
+	font-size: 14px;
+	font-weight:bold;
+	color: #646464;
+}
+.contentData>.codeView{
+	border: 1px solid rgba(156,165,181,0.25);
+	margin-bottom:20px;
+	border-radius:4px;
+	background:white;
+	color:black;
+}
+/*.getstartedbtn{
+	width:100px;
+	height:50px;
+	border:2px solid #fa9d03;
+
+}
+ .contentData>.codeView>xmp,.contentData>.codeView>pre>xmp{
+	font-size:12px;
+	margin:4px 0;
+}
+.contentData>.codeView>pre{
+	width: 90%;
+	overflow-wrap: break-word;
+	margin-left: 15px;:
+} */
+
+.webMobileSection{
+	width:100%;
+	height:250px;
+}.devSupportSection{	width:100%;	height:590px;}
+.webSection{
+	height:250px;
+	display:inline-block;
+	width:50%;
+	background-color:#fafafa;
+	border-right:1px solid #d9dce3;
+	float:left;
+}
+.mobileSection{
+	background-color: #fafafa;
+	display: inline-block;
+	height: 250px;
+	margin: 0px;
+	width: 49.5%;
+}
+.containerDiv{
+	width:80%;
+	margin:0 auto;
+	height:250px;
+	background-color:#fbfcfc;
+	border-bottom:1px solid #d9dce3;
+}
+.webIcon,.mobileIcon{
+	margin: 0 auto;
+	text-align: center;
+	width: 125px;
+	height: 125px;
+	margin-top: 35px;
+	cursor: pointer;
+} .devIcon{	display: inline-block;	width: 50%;	padding-left: 37%;	background-color: #fafafa;	  /* border-right: 1px solid #d9dce3; */	/* float: left; */} .devSection{	height:250px;	display:inline-block;	width:50%;	margin-top: 110px;	background-color:#fafafa;	padding-left:23%;}
+.webIcon img:hover, .mobileIcon img:hover{
+	width:115px;
+}
+.websiteText,.mobileText,.devText{
+	width: 100%;
+	text-align: center;
+	font-size: 19px;
+	font-weight: normal;
+	color: #646464;
 	cursor:pointer;
 }
-.quickPay i{margin-right: 5px;}
-.quickPay .fa-square-o{display:none;}
-.quickPay span{font-size: 12px;}
-.backIcon{
-	display:none;
-}
-.cIcon{
-	display:none;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]{
-	position:absolute;
-	opacity:0;
-	filter: alpha(opacity=0);
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label{
-	border-left:2px solid #f7941e;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >span{
-	color:#f7941e;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >i{
-	color:#f7941e;
-	font-size: 17px;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >.triangle{
-	display:block;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]  ~ div{
-	display:none;
-}
-.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked:not(:disabled)  ~ div{
-	display:block;
-}
-input[name="savedAccName"] + label .cardFront{
-	display:block;
-}
-input[name="savedAccName"]:checked + label .cardFront{
-	display:none;
-}
-input[name="savedAccName"] + label .cardBack{
-	display:none;
-}
-input[name="savedAccName"]:checked + label .cardBack{
-	display:block;
-}
-/* ````````````````````````` footer ```````````````````````` */
-.footer{
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-}
-.footerTxtBox{
-	display: inline-block;
-}
-.footerTxtBox i{
-	display: inline-block;
-}
-.footerCitrusIcon{
-	width: 16px;
-    vertical-align: middle;
-    margin-top: -2px;
-}
-.footerItrus{
-	margin-left: -4px;
-    color: #f7941e;
-}
-.footerIconBox{
-	display: block;
-    padding: 20px 0 5px;
-}
-.footerIcons{
-	width: 400px;
-}
-@media screen and (max-width: 620px) {
-    .checkOutBody{
-		width: 100%;
-	}
-	.checkoutUl {
-	  margin-top: 15px;
-	  width: 100%;
-	}
-	.checkoutLi{
-		display: block;
-		width: 100%;
-		margin-top: 5px;
-	}
-	.tabLabel{
-		display: block;
-		width: 100%;
-		height:30px;
-		text-align: left;
-		border-radius: 10px;
-		background-color:#F7F7F7;
-		border-left-width:0px;
-		-moz-box-shadow:    inset  0  0px 8px -8px #696868, 
-							inset  0 -5px 8px -8px #696868;
-		-webkit-box-shadow: inset  0  0px 8px -8px #696868, 
-							inset  0 -5px 8px -8px #696868;
-		 box-shadow:        inset  0  0px 8px -8px #696868, 
-							inset  0 -5px 8px -8px #696868;
-	}
-	.tabSpan{
-		display:inline-block;
-		padding-top: 2px;
-	}
-	.icon{
-		display:inline-block !important;;
-	}
-	.cIcon{
-		margin-right: -3px;
-		display:inline-block;
-	}
-	.cIcon img{
-		vertical-align: middle;
-		margin-top: -3px;
-		width: 14px;
-	}
-	.viewIconSpace{
-		margin-right: 5px;
-		font-size: 15px;
-	}
-	.backIcon{
-		display:none;
-		position: absolute;
-		left: 5px;
-		margin-top: 5px;
-		font-size: 14px;
-	}
-	.checkoutContainerBox{
-		position:static;
-		border-top-width: 0px;
-		width: 100%;
-		margin-top:0;
-	}
-	.checkoutMaintainer {
-		height:auto !important;
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"] +label{
-		display:none
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label{
-		display:block;
-		box-shadow: inset 0 0 0 0 #696868, 
-					inset 0 0 0 0 #696868;
-		border-left:0px solid #f7941e;
-		background-color:white;
-		text-align:center;
-		border-radius:0px;
-		padding: 0px 0 10px;
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >span{
-		font-size: 16px;
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >span.backIcon{
-		display:block;
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >.icon {
-		margin-left: 0px;
-	}
-	.txtIndent{
-		margin-left:15px;
-	}
-	.checkoutMaintainer{
-		margin:0 auto;
-		width:95%;
-		background-color: white;
-	}
-	.checkoutMaintainer >ul >li > input[name="paymentMode"]:checked +label >.triangle {
-	  display: none !important;
-	}
-	.cardContainerBox {
-		margin: 0px auto;
-	}
-	.space{
-		display:block !important;
-		padding:10px 0;
-	}
-	
-/* netBanking */
-	.NBsortcutContainerBox {
-		text-align: center;
-	}
-	.NBsortcutBox {
-		width: 60px;
-		height: 65px;
-		margin-left: 12px;
-	}
-	.mobileHideBank{
-		display:none;
-	}
-	.NBsortcutLabel i {
-	  left: 25px;
-	}
-	.NBimg {
-		width: 45px;
-		height: 45px;
-		left: 14%;
-		top: 27%;
-		background-size: 45px;
-	}
-/* EMI */
-	.spaceEmiTab{
-		display:block !important;
-		padding:5px 0;
-	}	
-	.emiCardContainerBox{
-		margin: 15px auto;
-	}
-/* COD */
-	.codAddressBox {
-		margin: 5px auto;
-		width: 85%;
-	}
-/* footer */
-	.footer{
-		padding-top: 15px;
-	}
-	.footerIcons {
-		width: 340px;
-	}
-}
-@media screen and (max-width: 450px){
-	.NBsortcutBox {
-	  margin-left: 0px;
-	}
-}
-@media screen and (max-width: 400px){
-	.CheckoutPayButton {
-		width: 255px;
-	}
-	.quickPay span {
-		font-size: 10px;
-	}
-	.EMItbl {
-		font-size: 11px;
-	}
-}
-
-/*header section */
-div.header{
-display:none;
-height: auto;
-width: 570px;
-border-bottom: none;
-text-align: center;
-}
-div.header > div{
-	width: 95%;
-	padding-top: 14px;
-	text-align:center;
-}
-div.header > div >table{
-	margin:0px auto;
-	text-align:left;
-	font-family: tahoma;
+.discriptionWeb,.discriptionMobile{
+	color: #6d7886;
+	font-weight: normal;
+	margin: 0 auto;
+	width: 86%;
+	margin-top: 10px;
+	color: #666565;
 	font-size: 13px;
 }
-div.header > div >table td{ 
-	height: 40px;
-	padding-left:5px;
-	color:gray;
-	/* vertical-align: middle; */
+.anchorLearnMore{
+	text-decoration:none;
+	color:#f5931e;
+	cursor:pointer;
 }
-div.header > div >table td  p{
-	margin:0px 0px 0px 0px;
-}
-div.header > div >table td input{
-	text-indent: 10px;
-	border: 2px solid #eeeeee;
-	border-radius: 5px;
-	border-color: #eeeeee;
-	color: #999999;
+.discriptionDiv{
 	width:100%;
-	height: 30px;
-	font-family: tahoma;
-	font-size: 14px;
+	text-align:center;
 }
-div.header > div >table td select{
-	border: 2px solid #eeeeee;
-	border-radius: 7px;
-	border-color: #eeeeee;
-	color: #999999;
-	margin: -5px;
-	outline: 0;
-	width: 102%;
-	height: 35px;
-	text-indent: 10px;
+label.androidNav>span{
+	border: 1px solid #cacdd3;
+	border-radius: 10px;
+	padding: 5px 15px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #6292a3;
+	margin-right:8px;
 }
-div.header > div >table td input:focus{
-	border-color: #C8C8C8;
-	outline: 0;
-}
-div.header > div >table tr td:first-child.paramName{
-	text-align: right;
-	padding-right: 18px;
+
+label.androidNav>span.androidSelected{
+	border: 3px solid #cacdd3;
 	font-weight:bold;
 }
+label.androidNav{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+label.androidNav>span>a{
+	text-decoration:none;
+	color: #6292a3;
+}
+label.androidNav>span:hover{
+	text-decoration:underline;
+}
+
+div.nextTab{
+	text-align:center;
+	margin:10px 0;
+}
+div.nextTab span,div.nextTab a span{
+	text-align:center;
+	display:inline-block;
+	width:250px;
+	color:white;
+	font-size:15px;
+	padding:6px 0;
+	border-radius:5px;
+	cursor:pointer;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);
+}
+.contentData>p.mark{
+	color: #6292a3;
+	font-weight: bold;	
+}
+.overViewKeys{
+	box-shadow: 0px 0px 10px rgbA(1,1,1,0.2);
+	padding: 12px 5px;
+	margin: 5px 0;
+	cursor: pointer;
+	color: #6292a3;
+	font-size: 14px;
+}
+.overViewKeysWithOutHover{
+	box-shadow: 0px 0px 10px rgbA(1,1,1,0.2);
+	padding:5px;
+	margin:5px 0;
+	color:#6292a3;
+}
+button.backBtn{
+	text-align: center;
+	width: 150px;
+	padding: 10px 0;
+	border: none;
+	color: white;
+	font-size: 16px;
+	border-radius: 7px;
+	cursor: pointer;
+	font-weight: normal;
+	display: inline-block;
+	background: -webkit-linear-gradient(#fdc942 ,#f75b04);
+	background: -o-linear-gradient(#fdc942 ,#f75b04);
+	background: -moz-linear-gradient(#fdc942 ,#f75b04);
+	background: linear-gradient(#fdc942 ,#f75b04);	background:orange\9; /* IE9 */
+}
+/* .............................................tabel ..................................................  */
+
+.tbl {
+ margin:0px;padding:0px;
+ width:100%;
+ box-shadow: 3px 4px 5px rgba(136,136,136,0.5);
+ border:1px solid #999999;
+ 
+ -moz-border-radius-bottomleft:0px;
+ -webkit-border-bottom-left-radius:0px;
+ border-bottom-left-radius:0px;
+ 
+ -moz-border-radius-bottomright:0px;
+ -webkit-border-bottom-right-radius:0px;
+ border-bottom-right-radius:0px;
+ 
+ -moz-border-radius-topright:0px;
+ -webkit-border-top-right-radius:0px;
+ border-top-right-radius:0px;
+ 
+ -moz-border-radius-topleft:0px;
+ -webkit-border-top-left-radius:0px;
+ border-top-left-radius:0px;
+}.tbl table{
+    border-collapse: collapse;
+ border-spacing: 0;
+ width:100%;
+ height:200px;
+ margin:0px;padding:0px;
+}.tbl tr:last-child td:last-child {
+ -moz-border-radius-bottomright:0px;
+ -webkit-border-bottom-right-radius:0px;
+ border-bottom-right-radius:0px;
+}
+.tbl table tr:first-child td:first-child {
+ -moz-border-radius-topleft:0px;
+ -webkit-border-top-left-radius:0px;
+ border-top-left-radius:0px;
+}
+.tbl table tr:first-child td:last-child {
+ -moz-border-radius-topright:0px;
+ -webkit-border-top-right-radius:0px;
+ border-top-right-radius:0px;
+}.tbl tr:last-child td:first-child{
+ -moz-border-radius-bottomleft:0px;
+ -webkit-border-bottom-left-radius:0px;
+ border-bottom-left-radius:0px;
+}.tbl tr:hover td{
+ 
+}
+.tbl tr:nth-child(odd){ background-color:#e5e5e5; }
+.tbl tr:nth-child(even)    { background-color:#ffffff; }.tbl td{
+ vertical-align:middle;
+ border:1px solid #999999;
+ border-width:0px 1px 1px 0px;
+ text-align:left;
+ padding:5px 10px;
+ font-size:14px;
+ font-weight:normal;
+ color:#646464;
+}.tbl tr:last-child td{
+ border-width:0px 1px 0px 0px;
+}.tbl tr td:last-child{
+ border-width:0px 0px 1px 0px;
+}.tbl tr:last-child td:last-child{
+ border-width:0px 0px 0px 0px;
+}
+.tbl tr:first-child td{
+  background:-o-linear-gradient(bottom, #fdc942 5%, #f75b04 100%); background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fdc942), color-stop(1, #f75b04) );
+ background:-moz-linear-gradient( center top, #fdc942 5%, #f75b04 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdc942", endColorstr="#f75b04"); background: -o-linear-gradient(top,#fdc942,f75b04);
+
+ background-color:#fdc942;
+ border:0px solid #999999;
+ text-align:center;
+ border-width:0px 0px 1px 1px;
+ font-size:14px;
+ font-weight:bold;
+ color:#ffffff;
+}
+.tbl tr:first-child:hover td{
+ background:-o-linear-gradient(bottom, #fdc942 5%, #f75b04 100%); background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fdc942), color-stop(1, #f75b04) );
+ background:-moz-linear-gradient( center top, #fdc942 5%, #f75b04 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdc942", endColorstr="#f75b04"); background: -o-linear-gradient(top,#fdc942,f75b04);
+
+ background-color:#fdc942;
+}
+.tbl tr:first-child td:first-child{
+ border-width:0px 0px 1px 0px;
+}
+.tbl tr:first-child td:last-child{
+ border-width:0px 0px 1px 1px;
+}
+.jsDemo{	width:100%;	height:100%;	z-index:1000;	position:fixed;	    background: -webkit-radial-gradient(rgba(1,1,1,0.1),rgba(1,1,1,0.6)); /* Safari 5.1 to 6.0 */    background: -o-radial-gradient(rgba(1,1,1,0.1),rgba(1,1,1,0.6)); /* For Opera 11.6 to 12.0 */    background: -moz-radial-gradient(rgba(1,1,1,0.1),rgba(1,1,1,0.6)); /* For Firefox 3.6 to 15 */      background: radial-gradient(rgba(1,1,1,0.1),rgba(1,1,1,0.6)); /* Standard syntax (must be last) */}.payWithJs{	display: inline-block;	color: white;	font-size: 16px;	padding-top: 40px;}

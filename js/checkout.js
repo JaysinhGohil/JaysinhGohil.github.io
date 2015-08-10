@@ -57,8 +57,8 @@ jQuery(document).ready(function() {
     });
 
 });
-jQuery(document).ready(function() {
+/* jQuery(document).ready(function() {
 	$(".checkOutDemo").css({"transform": "all 1s ease, opacity 1.5s ease", "transition": "all 1s ease, opacity 1.5s ease","transform": "rotateY(360deg)"});
 	$(".checkOutDemo").css({"-webkit-transform": "all 1s ease, opacity 1.5s ease", "transition": "all 1s ease, opacity 1.5s ease","-webkit-transform": "rotateY(360deg)"});
 	$(".checkOutDemo").css({"-webkit-transform": "all 1s ease, opacity 1.5s ease", "transition": "all 1s ease, opacity 1.5s ease","-webkit-transform": "rotateY(360deg)"});
-	});
+	}); */

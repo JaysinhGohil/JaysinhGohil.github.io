@@ -1,760 +1,196 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">		
 <html lang="en">
 	<head>	
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />		
-		<link rel="stylesheet" type="text/css" href="css/style.css">		
-		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">		
+		<link rel="stylesheet" type="text/css" href="css/tab.css">
 		<script src="js/jquery-1.11.1.min.js"></script>			
-		<script src="js/PIE.js"></script>			
-	</head>	
-	<body>	
-		<div class="checkOutBody">
-			<input id="enableQuickPay" type="hidden" value="true" />
-			<div class="banner"></div>
-			<div class="boxMaintainer topSpace">
-				<div class="boxTitle commanBgColor">
-					<p class="boxTitleTxt">Consumer Details
-						<label class="boxTitleEdit">
-							<span class="edit">
-								<i class="fa fa-eye viewIconSpace"></i>View
-							</span>
-						</label>
-					</p>
-				</div>
-				<div class="userDetailsSection">
-					<div class="userDetailsBlock">
-						<div class="header">
-							<div>
-								<table>
-									<tbody>
-										<tr>
-											<td class="paramName">
-												<span style="color:black">* </span>Email
-											</td>
-											<td colspan="2">
-												<input type="text" id="systemp_Email" placeholder="Enter Email" value="priyank@hams.co.in" mandatory="y" style="margin: -5px;">
-											</td>
-										</tr>
-										<tr>
-											<td class="paramName">
-												<span style="color:black;visibility: hidden;">* </span>Mobile
-											</td>
-											<td colspan="2">
-												<input type="text" id="systemp_Mobile" placeholder="Enter Mobile" maxlength="10" value="8600436065" mandatory="n" style="margin: -5px;">
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>					
-					<p class="ViewMoreDetails commanFontColor">View</p>
-				</div>
+		<link rel="stylesheet" type="text/css" href="css/style2.css">	
+	</head>		
+	<body ng-controller="ScrollCtrl">
+<!-- ................................................. header body  ................................................ -->
+<!-- Top Scroll -->
+		<div class="jsDemo">	
+	<!--------------------------------------hidden form fields-------------------------------------------------->
+			
+		<!-- <input id="citrusEmail" type="hidden" value="jaysinh.gohil@citruspay.com" />		 -->
+		   
+	       <!--unique transaction id-->
+			<input type="hidden" readonly id="citrusMerchantTxnId" value="" placeholder="Merchant transaction id" />
+			<!--Amount-->
+			<input type="hidden" readonly  id="citrusAmount" value="" />
+			<!--Mobile number-->
+			<input type="hidden" readonly id="citrusMobile" value="8856044553" />
+			<!--First Name-->
+			<input type="hidden" readonly id="citrusFirstName" value="Jaysinh" />
+			<!--Last Name-->
+			<input type="hidden" readonly id="citrusLastName" value="Gohil" />
+			<!--Street1-->
+			<input type="hidden" readonly id="citrusStreet1" value="karve chowk" />
+			<!--Street2-->
+			<input type="hidden" readonly id="citrusStreet2" value="karve nagar"/>
+			<!--City-->
+			<input type="hidden" readonly id="citrusCity" value="Pune"/>
+			<!--State-->
+			<input type="hidden" readonly id="citrusState" value="Maharashtra"/>
+			<!--Country-->
+			<input type="hidden" readonly id="citrusCountry" value="India"/>
+			<!--Zip-->
+			<input type="hidden" readonly id="citrusZip" value="411052"/>
+			<!--Signature -->
+			<input type="hidden" readonly id='citrusSignature' value="" />
+			<!--Return Url-->
+			<input type="hidden" readonly id="citrusReturnUrl" value=""  />
+			<!--Custom parameter Name-->
+			<input type="hidden" id="citrusCustomParamsName1" value="plan"  />
+			<!--Custom parameter value-->
+			<input type="hidden" id="citrusCustomParamsValue1" value="Rs. 10 plan"  />
+			<!--Custom parameter Name-->
+			<input type="hidden" id="citrusCustomParamsName2" value="productName"  />
+			<!--Custom parameter value-->
+			<input type="hidden" id="citrusCustomParamsValue2" value="HD Pendrive"  />
+			<!--Card type-->
+			<input type="hidden" id="citrusCardType" value=""/>
+	<!--------------------------------------hidden form fields-------------------------------------------------->	
+		<div class="checkOutDemo drop-shadow">
+			<div class="disableBlock"></div>
+			<div>
+				<img class="checkOutHeader" src="images/logo@2x.png">
+				<a href="../citrusWallet/cart.html" class="closeCheckout">
+					<img class="closeCheckoutImg" src="images/close.png">
+				</a>
 			</div>
-			<div class="boxMaintainer">
-				<div class="boxTitle commanBgColor">
-					<p class="boxTitleTxt">Checkout</p>
-				</div>
-				<div class="checkoutMaintainer">
-					<ul class="checkoutUl">
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="Citrus_Accounts">
-							<label for="Citrus_Accounts" class="tabLabel" >
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i onclick="back()" class="fa fa-user icon"></i>
-								<span class="tabSpan "><span><img class="cTabIcon txtIndent" src="images/logo.png" /></span><span class="itrusInTab">itrus</span></span>
-								<span class="tabSpan">Accounts</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox" >
-								<div class="savedAccBox">
-									<div class="savedAccCardBox">
-										<input class="card" type="radio" name="savedAccName" id="x" style="position:absolute;visibility:hidden;left:0;" >
-										<label for="x" class="savedAccCard">
-											<span class="cardFront">
-												<span class="savedAccCardChipIcon"></span>
-												<div class="savedAccCardNumberDiv">
-													<span class="savedAccMaskedCardNumber">XXXX-XXXX-XXXX-</span>
-													<span class="savedAccUnMaskedCardNumber">4243</span>
-												</div>
-												<div class="savedAccCardBottomDiv">
-													<span class="savedAccCardHolderName">Jaysinh Gohil</span>
-													<img class="savedAccCardScheme" src="images/master.png">
-												</div>
-											</span>
-											<span class="cardBack">  
-												<div style="height: 25px;width: 100%;background-color: gray;margin-top: 20px;"></div>
-												<div style="margin: 5px 0;height: 30px;width: 60%;background-color: #F5F5F5;position: relative;">
-													<input type="password" placeholder="CVV" style="width: 40%;height: 30px;border: 0;border: none;border: 2px solid rgba(1,1,1,0.2);border-radius: 5px;position: absolute;right: -1px;text-align: center;right: -66px;top: -2px;">
-												</div>												
-											</span>
-										</label>
-									</div>
-									<div class="savedAccCardBox">
-										<input class="card" type="radio" name="savedAccName" id="y" style="position:absolute;visibility:hidden;left:0;" >
-										<label for="y" class="savedAccCard">
-											<span class="cardFront">
-												<span class="savedAccCardChipIcon"></span>
-												<div class="savedAccCardNumberDiv">
-													<span class="savedAccMaskedCardNumber">XXXX-XXXX-XXXX-</span>
-													<span class="savedAccUnMaskedCardNumber">4243</span>
-												</div>
-												<div class="savedAccCardBottomDiv">
-													<span class="savedAccCardHolderName">Jaysinh Gohil</span>
-													<img class="savedAccCardScheme" src="images/master.png">
-												</div>
-											</span>
-											<span class="cardBack">  
-												<div style="height: 25px;width: 100%;background-color: gray;margin-top: 20px;"></div>
-												<div style="margin: 5px 0;height: 30px;width: 60%;background-color: #F5F5F5;position: relative;">
-													<input type="password" placeholder="CVV" style="width: 40%;height: 30px;border: 0;border: none;border: 2px solid rgba(1,1,1,0.2);border-radius: 5px;position: absolute;right: -1px;text-align: center;right: -66px;top: -2px;">
-												</div>												
-											</span>
-										</label>
-									</div>
-								</div>
-								<div class="buttonContainerBox" style="position: absolute;bottom: 0;">
-									<button class="CheckoutPayButton">
-										<span>Pay</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-inr"></i>
-										</span>
-										<span>1.00</span>
-									</button>
-								</div>
-							</div>
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="Credit_Card">
-							<label for="Credit_Card" class="tabLabel">
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-credit-card icon"></i>
-								<span class="tabSpan txtIndent">Credit</span>
-								<span class="tabSpan">Card</span>
-								<h1 class="triangle"></h1>
-							</label>	
-							<div class="checkoutContainerBox">								
-								<p class="space"></p>
-								<div class="cardContainerBox">
-									<div class="cardNumberContainer">
-										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
-									</div>
-									<div class="cardExpiryCvvContainer" >
-										<select class="cardExpiryMonthSelect" >
-											<option>MM</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-										</select>
-										<select class="cardExpiryYearSelect">
-											<option>YYYY</option>
-											<option>2015</option>
-											<option>2016</option>
-											<option>2017</option>
-											<option>2018</option>
-											<option>2019</option>
-											<option>2020</option>
-											<option>2021</option>
-											<option>2022</option>
-											<option>2023</option>
-											<option>2024</option>
-											<option>2025</option>
-											<option>2026</option>
-											<option>2028</option>
-											<option>2029</option>
-											<option>2030</option>
-											<option>2031</option>
-											<option>2032</option>
-											<option>2033</option>
-											<option>2034</option>
-											<option>2035</option>
-											<option>2036</option>
-											<option>2037</option>
-											<option>2038</option>
-											<option>2039</option>
-											<option>2040</option>
-											<option>2041</option>
-											<option>2042</option>
-											<option>2043</option>
-											<option>2044</option>
-											<option>2045</option>
-											<option>2046</option>
-											<option>2047</option>
-											<option>2048</option>
-											<option>2049</option>
-											<option>2050</option>
-										</select>
-										<span class="cardCvvIcon"></span>
-										<input class="cardCvvInput" type="password" placeholder="CVV">
-									</div>
-									<div class="cardHolderContainerBox">
-										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
-									</div>
-								</div>
-								<div class="buttonContainerBox">
-									<button class="CheckoutPayButton" >
-										<span>Pay</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-inr"></i>
-										</span>
-										<span>1.00</span>
-									</button>
-								</div>
-								<div class="quickPay">
-									<i class="fa fa-check-square"></i>									
-									<i class="fa fa-square-o"></i>
-									<span>Save this card for faster payment experience</span>						  
-								</div>
-							</div>								
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="Debit_Card" >
-							<label for="Debit_Card" class="tabLabel">
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-credit-card icon"></i>
-								<span class="tabSpan txtIndent">Debit</span>
-								<span class="tabSpan">Card</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox">
-								<p class="space" style="display:none;"></p>
-								<div class="cardContainerBox">
-									<div class="cardNumberContainer">
-										<input class="cardNumberInput" type="text" placeholder="Debit Card Number" />
-									</div>
-									<div class="cardExpiryCvvContainer" >
-										<select class="cardExpiryMonthSelect" >
-											<option>MM</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-										</select>
-										<select class="cardExpiryYearSelect">
-											<option>YYYY</option>
-											<option>2015</option>
-											<option>2016</option>
-											<option>2017</option>
-											<option>2018</option>
-											<option>2019</option>
-											<option>2020</option>
-											<option>2021</option>
-											<option>2022</option>
-											<option>2023</option>
-											<option>2024</option>
-											<option>2025</option>
-											<option>2026</option>
-											<option>2028</option>
-											<option>2029</option>
-											<option>2030</option>
-											<option>2031</option>
-											<option>2032</option>
-											<option>2033</option>
-											<option>2034</option>
-											<option>2035</option>
-											<option>2036</option>
-											<option>2037</option>
-											<option>2038</option>
-											<option>2039</option>
-											<option>2040</option>
-											<option>2041</option>
-											<option>2042</option>
-											<option>2043</option>
-											<option>2044</option>
-											<option>2045</option>
-											<option>2046</option>
-											<option>2047</option>
-											<option>2048</option>
-											<option>2049</option>
-											<option>2050</option>
-										</select>
-										<span class="cardCvvIcon"></span>
-										<input class="cardCvvInput" type="password" placeholder="CVV">
-									</div>
-									<div class="cardHolderContainerBox">
-										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
-									</div>
-								</div>
-								<div class="buttonContainerBox">
-									<button class="CheckoutPayButton" >
-										<span>Pay</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-inr"></i>
-										</span>
-										<span>1.00</span>
-									</button>
-								</div>
-								<div class="quickPay">
-									<i class="fa fa-check-square"></i>
-									<i class="fa fa-square-o"></i>
-									<span>Save this card for faster payment experience</span>						  
-								</div>
-							</div>	
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="Net_Banking" >
-							<label for="Net_Banking" class="tabLabel">
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-university icon"></i>
-								<span class="tabSpan txtIndent">Net</span>
-								<span class="tabSpan">Banking</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox">
-								<p style="  padding: 15px 0 9px 0;font-size: 13px;">
-									<i class="fa fa-hand-o-down" style="margin-right: 10px;"></i>Popular Banks
-								</p>
-								<div class="NBsortcutContainerBox">
-									<div class="NBsortcutBox" >
-										<input type="radio" name="bankSortcut" id="A" >
-										<label class="NBsortcutLabel" for="A">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg hdfc"></span>
-										</label>
-									</div>
-									<div class="NBsortcutBox" >
-										<input type="radio" name="bankSortcut" id="B" >
-										<label class="NBsortcutLabel" for="B">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg icici"></span>
-										</label>
-									</div>
-									<div class="NBsortcutBox" >
-										<input type="radio" name="bankSortcut" id="C" >
-										<label class="NBsortcutLabel" for="C">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg sbi"></span>
-										</label>
-									</div>
-									<div class="NBsortcutBox" >
-										<input type="radio" name="bankSortcut" id="D" >
-										<label class="NBsortcutLabel" for="D">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg bankofindia"></span>
-										</label>
-									</div>
-									<div class="NBsortcutBox mobileHideBank" >
-										<input type="radio" name="bankSortcut" id="E" >
-										<label class="NBsortcutLabel" for="E">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg federal"></span>
-										</label>
-									</div>
-									<div class="NBsortcutBox mobileHideBank" >
-										<input type="radio" name="bankSortcut" id="F" >
-										<label class="NBsortcutLabel" for="F">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-dot-circle-o"></i>
-											<span class="NBimg axis"></span>
-										</label>
-									</div>
-								</div>
-								<div class="NBselectBankBox">
-									<select class="NBselectBankDropDown">
-										<option>- - - Select other Banks from here - - -</option>
-										<option>SBI</option>
-										<option>HDFC</option>
-									</select>										
-								</div>
-								<div class="buttonContainerBox NBbtn">
-									<button class="CheckoutPayButton">
-										<span>Pay</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-inr"></i>
-										</span>
-										<span>1.00</span>
-									</button>
-								</div>
-								<div class="quickPay">
-									<i class="fa fa-check-square"></i>
-									<i class="fa fa-square-o"></i>
-									<span>Save this Bank for faster payment experience</span>						  
-								</div>
-							</div>
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="COD">
-							<label for="COD" class="tabLabel">
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-truck icon"></i>
-								<span class="tabSpan txtIndent">Cash On</span>
-								<span class="tabSpan">Delivery</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox">
-								<p class="spaceEmiTab"></p>
-								<div class="codBox">
-									<div class="codAddressBox">
-										<div class="codAddressTitle">
-											<span class="codAddressTxt">Delivery Address</span>
-											<label class="codAddressEdit">[edit]</label>
-										</div>
-										<div class="codAddress">A-204, Sun Grandeur, Patil Nagar, Bavdhan Sunarwadi, Pune, Maharashtra - 411021</div>																			
-										<div style="border-top: 1px solid rgba(0,0,0,0.1);padding: 5px 0;">
-											<span>
-												<i class="fa fa-hand-o-right"></i>
-											</span>
-											<span style="margin: 0 0 0 5px;">Place order of :</span>									
-											<span style="margin: 0 0 0 5px;color: #f7941e;">
-													<i class="fa fa-inr"></i>
-											</span>
-											<span style="color: #f7941e;">
-													1
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="codButtonContainerBox ">
-									<button class="CheckoutPayButton">
-										<span>Place Order</span>
-									</button>
-								</div>
-							</div>
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="EMI" >
-							<label for="EMI" class="tabLabel">	
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-money icon"></i>
-								<span class="tabSpan txtIndent">EMI</span>
-								<span class="tabSpan">Payment</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox" style="height: 390px;">
-								<p class="spaceEmiTab"></p>
-								<div class="EMIbankBox">
-									<div class="EMIbankMsgOne" >
-										  <span>Selected Bank:</span>
-										<span class="selectedBankForEMI" style="
-											color: #f7941e;
-										"></span><span class="EMIchangeBank" style="
-											position: absolute;
-											right: 11px;
-											cursor: pointer;
-											color: #f7941e;
-											font-size:12px;
-										"><span style="margin-left:5px;
-											color: #f7941e;
-										">[edit]</span><span></span></span>
-									</div>
-									<div class="EMIselectBankMsg" style="padding:15px 0;">
-										<i style="font-size: 18px;margin-left: -18px;" class="fa fa-hand-o-down"></i><span style="margin-left: 12px; ">Select your Bank for EMI</span>
-									</div>
-									<div class="EMIselectBankBox">
-										<select class="EMIselectBankDropDown">
-											<option>- - - Select Bank - - -</option>
-											<option value="SBI">SBI</option>
-											<option value="HDFC">HDFC</option>
-										</select>										
-									</div>
-								</div>
-								<div class="EMItbl">
-									<div class="EMItblHeader" >
-										<span class="EMItblHeaderTr">Months</span>
-										<span class="EMItblHeaderTr">Interest rate</span>
-										<span class="EMItblHeaderTr">Monthly Installment </span>
-										<span class="EMItblHeaderTr">Interest Paid</span>
-									</div>
-									<span>
-										<input id="a" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="a" class="EMItblTrBody">										
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">3</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-									<span>
-										<input id="b" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="b" class="EMItblTrBody">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">6</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-									<span>
-										<input id="c" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="c" class="EMItblTrBody">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">9</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-									<span>
-										<input id="d" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="d" class="EMItblTrBody">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">12</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-									<span>
-										<input id="e" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="e" class="EMItblTrBody">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">15</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-									<span>
-										<input id="f" class="EMItblRadio" type="radio" name="emiTblFild" >
-										<label for="f" class="EMItblTrBody">
-											<i class="fa fa-circle-o"></i>
-											<i class="fa fa-circle"></i>
-											<span class="EMItblTd">18</span>
-											<span class="EMItblTd">13.15</span>
-											<span class="EMItblTd">0.34</span>
-											<span class="EMItblTd">0.02</span>
-											<span class="EMIeditTbL">[edit]</span>
-										</label>
-									</span>
-								</div>
-								<div class="emiButtonContainerBox" style="display:none;margin-top: 25px;">
-									<button class="CheckoutPayButton">
-										<span>Checkout</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-chevron-circle-right"></i>
-										</span>
-									</button>
-								</div>
-								<div class="emiCardContainerBox" style="display:none;">
-									<div class="cardNumberContainer">
-										<input class="cardNumberInput" type="text" placeholder="Credit Card Number" />
-									</div>
-									<div class="cardExpiryCvvContainer" >
-										<select class="cardExpiryMonthSelect" >
-											<option>MM</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-										</select>
-										<select class="cardExpiryYearSelect">
-											<option>YYYY</option>
-											<option>2015</option>
-											<option>2016</option>
-											<option>2017</option>
-											<option>2018</option>
-											<option>2019</option>
-											<option>2020</option>
-											<option>2021</option>
-											<option>2022</option>
-											<option>2023</option>
-											<option>2024</option>
-											<option>2025</option>
-											<option>2026</option>
-											<option>2028</option>
-											<option>2029</option>
-											<option>2030</option>
-											<option>2031</option>
-											<option>2032</option>
-											<option>2033</option>
-											<option>2034</option>
-											<option>2035</option>
-											<option>2036</option>
-											<option>2037</option>
-											<option>2038</option>
-											<option>2039</option>
-											<option>2040</option>
-											<option>2041</option>
-											<option>2042</option>
-											<option>2043</option>
-											<option>2044</option>
-											<option>2045</option>
-											<option>2046</option>
-											<option>2047</option>
-											<option>2048</option>
-											<option>2049</option>
-											<option>2050</option>
-										</select>
-										<span class="cardCvvIcon"></span>
-										<input class="cardCvvInput" type="password" placeholder="CVV">
-									</div>
-									<div class="cardHolderContainerBox">
-										<input class="cardHolderInput" placeholder="Card Holder Name" type="text" >
-									</div>
-								</div>
-								<div class="EmiButtonContainerBoxCheck" style="display:none;">
-									<button class="CheckoutPayButton" >
-										<span>Pay</span>
-										<span style="margin: 0 0 0 5px;">
-											<i class="fa fa-inr"></i>
-										</span>
-										<span>1.00</span>
-									</button>
-								</div>								
-							</div>
-						</li>
-						<li class="checkoutLi">
-							<input type="radio" name="paymentMode" id="IMPS">
-							<label for="IMPS" class="tabLabel">
-								<span class="backIcon"><i class="fa fa-arrow-left"></i></span>
-								<i class="fa fa-exchange icon"></i>
-								<span class="tabSpan txtIndent">IMPS</span>
-								<span class="tabSpan">Payment</span>
-								<h1 class="triangle"></h1>
-							</label>
-							<div class="checkoutContainerBox">
-							7
-							</div>
-						</li>
+			<div class="checkOutSpace"></div>
+			<div class="emailFld">
+				<input id="citrusEmail" placeholder="Enter Your Email" type="text" class="checkOutInput emailInput" />
+				<p id="checkOutEmailError" style="display:none" class="checkOutErrorMsg Email_error"></p>
+			</div>
+			<div class="checkOutBody">
+<!--NAV-->		<div class="checkOutNav">
+					<ul>
+						<a><li onclick="checkTabMgnt(1,'citrusCardPay','Debit')" id="navigationTab-1">Debit Card</li></a>
+						<a><li onclick="checkTabMgnt(2,'citrusCardPay','Credit')" id="navigationTab-2" >Credit Card</li></a>
+						<a><li onclick="checkTabMgnt(3,'citrusNetbanking','Netbanking')" id="navigationTab-3" >Net Banking</li></a>
 					</ul>
 				</div>
-				<div class="footer">
-					<span class="footerTxtBox">
-						<i class="fa fa-lock" ></i>
-						<span>Secured with</span>
-						<label>
-							<img class="footerCitrusIcon" src="images/logo.png">
-						</label>
-						<span class="footerItrus">itrus</span>
-					</span>
-					<span class="footerIconBox" >
-						<img class="footerIcons" src="images/FooterIconsSsl.png"/>
-					</span>
+				<div class="checkOutPaymentBody">
+					<div class="PO-2 PO-1 checkOutCardBody" style="background-image: url('images/map.png');background-position: center;background-repeat: no-repeat;background-size: 250px;display:none;">
+						<form>
+							<div class="checkOutFieldBox checkOutSchemImg checkOutCardHeader">
+								<span class="cardTypeCantainer"></span>
+								<input type="hidden" id="citrusScheme">
+								<img id="checkOutScheme" style="display:none" src="images/blank.png">
+							</div>
+							<div class="checkOutFieldBox" style="margin-bottom: 5px; margin-top: 20px;">
+								<input id="citrusNumber" class="checkOutInput empty_val" type="text" placeholder="Card Number" style="background-image:none;">
+							</div>
+							<p id="checkOutCardError" style="display:none" class="checkOutErrorMsg card_error"></p>
+							<div class="checkOutFieldBox">
+								<input id="citrusExpiry" class="checkOutInput checkOutInputExpiary empty_val" maxlength="7" type="text" placeholder="MM / YY">
+								<input type="password"  id="citrusCvv" class="checkOutInput checkOutInputCvv empty_val" placeholder="CVV" />
+							</div>
+							<span class="errorSpanBox">
+								<p id="checkOutExpiryError" style="display:none" class="checkOutErrorMsg checkOutErrorMsgExpiry"></p>
+								<p id="checkOutCvvError" style="display:none" class="checkOutErrorMsg checkOutErrorMsgCvv"></p>
+							</span>
+							<div class="checkOutFieldBox" style="margin-top: 5px;">
+								<input id="citrusCardHolder" class="checkOutInput" type="hidden" value="Valuedalued Customer" />
+							</div>
+							<p id="checkOutCardHolderError" style="display:none" class="checkOutErrorMsg"></p>
+						</form>
+						<p id="checkOutMestroError" class="checkOutErrorMsg card_error">Expiry &amp; CVV not mandatory for maestro card</p>
+					</div>
+					
+<!--NB Payment-->	<div class="PO-3 checkOutNetBankingBody navigationTab" style="display:none;">
+						<div>
+							<ul>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID002" type="radio" name="checkOutNBradio" >
+									<img src="images/axis.png">
+									<span class="bank_label">AXIS</span>
+								</li>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID019" type="radio" name="checkOutNBradio" >
+									<img src="images/bankofindia.png">
+									<span class="bank_label">BOI</span>
+								</li>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID005" type="radio" name="checkOutNBradio" >
+									<img src="images/sbi.png">
+									<span class="bank_label">SBI</span>
+								</li>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID001" type="radio" name="checkOutNBradio" >
+									<img src="images/icici.png">
+									<span class="bank_label">ICICI</span>
+								</li>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID010" type="radio" name="checkOutNBradio" >
+									<img src="images/hdfc.png" >
+									<span class="bank_label">HDFC</span>
+								</li>
+								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
+									<input style="position:absolute;opacity:0;" value="CID006" type="radio" name="checkOutNBradio" >
+									<img src="images/DeutscheBank.png">
+									<span class="bank_label">Deutsche</span>
+								</li>								
+							</ul>
+						</div>
+					</div>
+					<div class="PO-3" style="display:none;">
+						<center>
+							<div>
+								<select id="citrusAvailableOptions">
+								</select>
+								<p id="checkOutNetError" class="checkOutErrorMsg NB_error"></p>
+							</div>
+						</center>
+					</div>
 				</div>
-			</div>
-		</div>
-		<script>		
-			$( document ).ready(function() {
-				if ( $(".checkOutBody").width() == 650) {	
-					$("input[id='Credit_Card']").prop('checked', true);					
-				}else{
-					closedTab();
-				}
-				if($("input[name='paymentMode']:checked")){
-					if ( $(".checkOutBody").width() == 650){
-						autoHight();
-					}
-				}
-				$("input[name='paymentMode']").on("change ",function(){
-					if ( $(".checkOutBody").width() == 650){
-						autoHight();
-					}
-				});
-				$('body').on('change', '.EMIselectBankDropDown', function(){
-					$(".selectedBankForEMI").text($(".EMIselectBankDropDown").val());
-					$(".EMIselectBankMsg,.EMIselectBankDropDown,.EMItbl,.emiButtonContainerBox").hide();
-					$(".EMIbankMsgOne,.EMItbl,.EMItblTrBody").fadeIn(500);
-					$(".EMIeditTbL").css("visibility","hidden");
-					$(".fa-circle").css("visibility","visible");
-					$("input[name='emiTblFild']").attr("checked",false);
-				});
-				$("input[name='emiTblFild']").on("change",function(){
-					if($("input[name='emiTblFild']:checked")){$(".emiButtonContainerBox").fadeIn(500);}
-					else{$(".emiButtonContainerBox").hide();}
-				});
-				$(".CheckoutPayButton").on("click",function(){
-					$("input[name='emiTblFild'] ~ label,.emiButtonContainerBox").hide();
-					$("input[name='emiTblFild']:checked ~ label,.emiCardContainerBox,.EmiButtonContainerBoxCheck").show();
-					$(".EMIeditTbL").css("visibility","visible");
-					$(".fa-circle").css("visibility","hidden");
-				});
-				$(".EMIeditTbL").on("click",function(){						
-					$("input[name='emiTblFild']").attr("checked",false);
-					$(".EMIbankMsgOne,.EMItbl,.EMItblTrBody").fadeIn(500);
-					$(".EMIeditTbL").css("visibility","hidden");
-					$(".fa-circle").css("visibility","visible");					
-					$(".emiCardContainerBox,.EmiButtonContainerBoxCheck,.emiButtonContainerBox").hide();
-				});
-			});
-			var tabMng = 0;
-			$("input[name='paymentMode']").on("change",function(){
-				if($(".checkOutBody").css('width') != '650px'){
-					if( tabMng == 0){
-						$("label.tabLabel").css("display","none");
-						$(this).next().css("display","block");
-						$("label.tabLabel").removeClass("notSelected");
-						tabMng = 1;
-					}
-					else{
-						$("input[name='paymentMode']").prop('checked', false);
-						$("label.tabLabel").addClass("notSelected");
-						$("label.tabLabel").css("display","block");	
-						tabMng = 0;
-					}
-				}
-			});
-			$('.backIcon').click( function(){
-				if ( $(".checkOutBody").css('width') != '650px' && !$(this).hasClass( "notSelected" )) {	
-					closedTab();
-				}
-			});
-			function closedTab(){
-				$("input[name='paymentMode']").prop('checked', false);
-				$("label.tabLabel").css("display","block");
-				$("label.tabLabel").addClass("notSelected");
-			}
-			function autoHight(){
-				$(".checkoutMaintainer").height(($("input[name='paymentMode']:checked~div").height()+35));
 				
+			</div>	
+			<div class="checkOutBody2" style="display:none">
+				<img src="" class="errorImg" />
+			</div>
+			<button id="" class="checkOutBtn" >
+				<span>Pay 1 Rs</span>
+			</button>
+			<button id="retry" class="checkOutBtn2" onclick="backToCheckout()" style="display:none">
+				<span></span>
+			</button>
+			<div class="checkOutShadow" style="display:block">
+			</div>
+		</div>		
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js" > </script>
+		<script src="js/citrus.js" > </script>	
+		<script src="js/checkout.js" > </script>
+		<script src="js/config.js" > </script>		
+		<script src="https://icp.citruspay.com/js/jquery.payment.min.js" > </script>		
+		<script>
+		
+			window.onmessage = function(e){	
+				var userDetails = JSON.parse(e.data);
+				$("#citrusMerchantTxnId").val(userDetails.txnId);
+				$("#citrusAmount").val(userDetails.orderAmount);
+				$("#citrusSignature").val(userDetails.requestSignature);
+				$("#citrusReturnUrl").val(userDetails.returnUrl);
 			}
-			$(".EMIchangeBank").click(function(){
-				$(".EMIselectBankMsg,.EMIselectBankDropDown").fadeIn(500);
-				$(".EMIbankMsgOne,.EMItbl,.emiCardContainerBox,.EmiButtonContainerBoxCheck,.emiButtonContainerBox").hide();
-			});
-			$(".quickPay").click(function(){
-				if($("#enableQuickPay").val()=='true'){
-					$("#enableQuickPay").attr("value","false");
-					$(".fa-check-square").hide();
-					$(".fa-square-o").show();
-				}
-				else{
-					$("#enableQuickPay").attr("value","true");
-					$(".fa-square-o").hide();
-					$(".fa-check-square").show();
-				}
-			});
+				
+			function citrusServerErrorMsg(errorResponse) {        				 
+				$("#citrusErrorMessage").html(errorResponse.txMsg);        				 
+			}
+			function citrusClientErrMsg(errorResponse) {        				 
+				$("#citrusErrorMessage").html(errorResponse);
+			}
+					
+
 		</script>
+		<script src="js/checkOutDemo.js"></script>
+		
+		</div>
+
 	</body>
 </html>
