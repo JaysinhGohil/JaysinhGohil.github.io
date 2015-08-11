@@ -1852,7 +1852,8 @@ function memberPayment(modeOfPayment, isToken) {
   		if(flag === true) 
   	    { response = JSON.parse(response);  }
 		if (!!response && response.pgRespCode === "0") {
-			window.location = response.redirectUrl;
+		//	window.location = response.redirectUrl;
+		window.parent.location.href = response.redirectUrl;
 		} else {
 			citrusServerErrorMsg(response);
 		}
