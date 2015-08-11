@@ -39,14 +39,14 @@ jQuery(document).ready(function() {
 			 default: type = "blank";
 		}
 		if(type != "blank"){
-			$("#checkOutScheme").attr("src","./images/"+type+".png");
+			$("#checkOutScheme").attr("src","images/"+type+".png");
 			$("#checkOutScheme").show(1000);
 			if (type == "MTRO"){
 				$("#checkOutMestroError").addClass( "animationMestroError" );
 			}
 		}
 		else{
-			$("#checkOutScheme").attr("src","./images/blank.png");
+			$("#checkOutScheme").attr("src","images/blank.png");
 			$("#checkOutScheme").hide();
 			$("#checkOutMestroError").removeClass( "animationMestroError" );
 		}
