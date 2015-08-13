@@ -170,9 +170,10 @@
 		<script src="js/config.js" > </script>		
 		<script src="https://icp.citruspay.com/js/jquery.payment.min.js" > </script>		
 		<script>
-		
+			
 			window.onmessage = function(e){	
 				var userDetails = JSON.parse(e.data);
+				var iframeRemoval=userDetails.removeIF;
 				$("#citrusMerchantTxnId").val(userDetails.txnId);
 				$("#citrusAmount").val(userDetails.orderAmount);
 				$("#citrusSignature").val(userDetails.requestSignature);

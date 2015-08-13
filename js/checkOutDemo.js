@@ -340,3 +340,7 @@ function backToCheckout(){
 		$(".checkOutBody, .checkOutBtn, .emailFld").show();
 		$(".checkOutBody2, .checkOutBtn2").hide();
 }
+$("#closeCheckoutWallet").click(function () {
+	alert('This alert should not show up!');
+	iframeRemoval.remove();
+});
