@@ -343,5 +343,5 @@ function backToCheckout(){
 
 document.getElementById("closeCheckoutWallet").addEventListener("click", function(){
 				alert("0k")
-				document.getElementById("closeCheckoutWallet").remove();
+				document.getElementsByName("body").remove();
 			});	
