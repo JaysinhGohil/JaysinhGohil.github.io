@@ -342,5 +342,5 @@ function backToCheckout(){
 }
 $("#closeCheckoutWallet").click(function () {
 	alert('This alert should not show up!');
-	iframeRemoval.remove();
+	$("#iframeId").remove();
 });
