@@ -341,5 +341,6 @@ function backToCheckout(){
 		$(".checkOutBody2, .checkOutBtn2").hide();
 }
 $(".closeCheckout").click(function(){
-	console.log($("#citrusIframeId"));
+	alert("in");
+	$(this).parents("iframe").html("");
 });
