@@ -343,5 +343,5 @@ function backToCheckout(){
 $(".closeCheckout").click(function(){
 	alert("in");
 	$(this).parents("iframe").html("");
-	$('#citrusIframeId', window.parent.document).html("");
+	$('#citrusWallet', window.parent.document).html("");
 });
