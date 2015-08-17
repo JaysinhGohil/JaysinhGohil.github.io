@@ -340,3 +340,6 @@ function backToCheckout(){
 		$(".checkOutBody, .checkOutBtn, .emailFld").show();
 		$(".checkOutBody2, .checkOutBtn2").hide();
 }
+$(".closeCheckout").click(function(){
+	$("#citrusIframeId").html("");
+});
