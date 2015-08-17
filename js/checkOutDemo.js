@@ -341,7 +341,6 @@ function backToCheckout(){
 		$(".checkOutBody2, .checkOutBtn2").hide();
 }
 
-document.getElementById("closeCheckoutWallet").addEventListener("click", function(){
-				alert("0k")
-				document.getElementsByName("body").remove();
-			});	
+$("#closeCheckoutWallet").click(function(){
+	removeWalletIframe();
+});
