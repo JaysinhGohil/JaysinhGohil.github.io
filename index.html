@@ -1,197 +1,156 @@
-<!DOCTYPE html>
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">		
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en">
 	<head>	
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/tab.css">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />		
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">		
 		<script src="js/jquery-1.11.1.min.js"></script>			
-		<link rel="stylesheet" type="text/css" href="css/style2.css">	
-	</head>		
-	<body ng-controller="ScrollCtrl">
-<!-- ................................................. header body  ................................................ -->
-<!-- Top Scroll -->
-		<div class="jsDemo">	
-	<!--------------------------------------hidden form fields-------------------------------------------------->
-			
-		<!-- <input id="citrusEmail" type="hidden" value="jaysinh.gohil@citruspay.com" />		 -->
-		   
-	       <!--unique transaction id-->
-			<input type="hidden" readonly id="citrusMerchantTxnId" value="" placeholder="Merchant transaction id" />
-			<!--Amount-->
-			<input type="hidden" readonly  id="citrusAmount" value="" />
-			<!--Mobile number-->
-			<input type="hidden" readonly id="citrusMobile" value="8856044553" />
-			<!--First Name-->
-			<input type="hidden" readonly id="citrusFirstName" value="Jaysinh" />
-			<!--Last Name-->
-			<input type="hidden" readonly id="citrusLastName" value="Gohil" />
-			<!--Street1-->
-			<input type="hidden" readonly id="citrusStreet1" value="karve chowk" />
-			<!--Street2-->
-			<input type="hidden" readonly id="citrusStreet2" value="karve nagar"/>
-			<!--City-->
-			<input type="hidden" readonly id="citrusCity" value="Pune"/>
-			<!--State-->
-			<input type="hidden" readonly id="citrusState" value="Maharashtra"/>
-			<!--Country-->
-			<input type="hidden" readonly id="citrusCountry" value="India"/>
-			<!--Zip-->
-			<input type="hidden" readonly id="citrusZip" value="411052"/>
-			<!--Signature -->
-			<input type="hidden" readonly id='citrusSignature' value="" />
-			<!--Return Url-->
-			<input type="hidden" readonly id="citrusReturnUrl" value=""  />
-			<!--Custom parameter Name-->
-			<input type="hidden" id="citrusCustomParamsName1" value="plan"  />
-			<!--Custom parameter value-->
-			<input type="hidden" id="citrusCustomParamsValue1" value="Rs. 10 plan"  />
-			<!--Custom parameter Name-->
-			<input type="hidden" id="citrusCustomParamsName2" value="productName"  />
-			<!--Custom parameter value-->
-			<input type="hidden" id="citrusCustomParamsValue2" value="HD Pendrive"  />
-			<!--Card type-->
-			<input type="hidden" id="citrusCardType" value=""/>
-	<!--------------------------------------hidden form fields-------------------------------------------------->	
-		<div class="checkOutDemo drop-shadow">
-			<div class="disableBlock"></div>
-			<div>
-				<img class="checkOutHeader" src="images/logo@2x.png">
-				<a href="#" id="closeCheckoutWallet" class="closeCheckout">
-					<img class="closeCheckoutImg" src="images/close.png">
-				</a>
-			</div>
-			<div class="checkOutSpace"></div>
-			<div class="emailFld">
-				<input id="citrusEmail" placeholder="Enter Your Email" type="text" class="checkOutInput emailInput" />
-				<p id="checkOutEmailError" style="display:none" class="checkOutErrorMsg Email_error"></p>
-			</div>
-			<div class="checkOutBody">
-<!--NAV-->		<div class="checkOutNav">
-					<ul>
-						<a><li onclick="checkTabMgnt(1,'citrusCardPay','Debit')" id="navigationTab-1">Debit Card</li></a>
-						<a><li onclick="checkTabMgnt(2,'citrusCardPay','Credit')" id="navigationTab-2" >Credit Card</li></a>
-						<a><li onclick="checkTabMgnt(3,'citrusNetbanking','Netbanking')" id="navigationTab-3" >Net Banking</li></a>
-					</ul>
+	</head>	
+	<body>	
+		<div class="citrusWalletBox">
+<!-- My Wallet------------------------------------------------------------------------------------------------------ -->
+			<div class="myWallet page" style="display:block;">
+				<div class="walletHeader">
+					<span class="walletHeaderTxt">My Wallet</span>
 				</div>
-				<div class="checkOutPaymentBody">
-					<div class="PO-2 PO-1 checkOutCardBody" style="background-image: url('images/map.png');background-position: center;background-repeat: no-repeat;background-size: 250px;display:none;">
-						<form>
-							<div class="checkOutFieldBox checkOutSchemImg checkOutCardHeader">
-								<span class="cardTypeCantainer"></span>
-								<input type="hidden" id="citrusScheme">
-								<img id="checkOutScheme" style="display:none" src="images/blank.png">
-							</div>
-							<div class="checkOutFieldBox" style="margin-bottom: 5px; margin-top: 20px;">
-								<input id="citrusNumber" class="checkOutInput empty_val" type="text" placeholder="Card Number" style="background-image:none;">
-							</div>
-							<p id="checkOutCardError" style="display:none" class="checkOutErrorMsg card_error"></p>
-							<div class="checkOutFieldBox">
-								<input id="citrusExpiry" class="checkOutInput checkOutInputExpiary empty_val" maxlength="7" type="text" placeholder="MM / YY">
-								<input type="password"  id="citrusCvv" class="checkOutInput checkOutInputCvv empty_val" placeholder="CVV" />
-							</div>
-							<span class="errorSpanBox">
-								<p id="checkOutExpiryError" style="display:none" class="checkOutErrorMsg checkOutErrorMsgExpiry"></p>
-								<p id="checkOutCvvError" style="display:none" class="checkOutErrorMsg checkOutErrorMsgCvv"></p>
-							</span>
-							<div class="checkOutFieldBox" style="margin-top: 5px;">
-								<input id="citrusCardHolder" class="checkOutInput" type="hidden" value="Valuedalued Customer" />
-							</div>
-							<p id="checkOutCardHolderError" style="display:none" class="checkOutErrorMsg"></p>
-						</form>
-						<p id="checkOutMestroError" class="checkOutErrorMsg card_error">Expiry &amp; CVV not mandatory for maestro card</p>
-					</div>
-					
-<!--NB Payment-->	<div class="PO-3 checkOutNetBankingBody navigationTab" style="display:none;">
-						<div>
-							<ul>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID002" type="radio" name="checkOutNBradio" >
-									<img src="images/axis.png">
-									<span class="bank_label">AXIS</span>
-								</li>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID019" type="radio" name="checkOutNBradio" >
-									<img src="images/bankofindia.png">
-									<span class="bank_label">BOI</span>
-								</li>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID005" type="radio" name="checkOutNBradio" >
-									<img src="images/sbi.png">
-									<span class="bank_label">SBI</span>
-								</li>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID001" type="radio" name="checkOutNBradio" >
-									<img src="images/icici.png">
-									<span class="bank_label">ICICI</span>
-								</li>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID010" type="radio" name="checkOutNBradio" >
-									<img src="images/hdfc.png" >
-									<span class="bank_label">HDFC</span>
-								</li>
-								<li class="NBcheckOutList" onclick="checkOutSelectBankWithImg(this)">
-									<input style="position:absolute;opacity:0;" value="CID006" type="radio" name="checkOutNBradio" >
-									<img src="images/DeutscheBank.png">
-									<span class="bank_label">Deutsche</span>
-								</li>								
-							</ul>
+				<div class="citrusCashIconBox">
+					<img class="citrusCashIcon" src="images/citrus_cash.png" />
+				</div>
+				<div class="citrusCashInfo">
+					<p>Enjoy cashless transactions with citrus & </p>
+					<p>get exciting offers and cashbacks!</p>
+				</div>
+				<div class="walletPhoneNumberBox">
+					<div class="walletPhoneNumberInputBox">
+						<p class="walletPhoneNumberPlaceHolder">PHONE NUMBER</p>
+						<div class="InputBoxHeight">
+							<input class="walletPhoneNumberInput" type="text" autofocus />
 						</div>
 					</div>
-					<div class="PO-3" style="display:none;">
-						<center>
-							<div>
-								<select id="citrusAvailableOptions">
-								</select>
-								<p id="checkOutNetError" class="checkOutErrorMsg NB_error"></p>
-							</div>
-						</center>
+				</div>
+				<div class="walletEmailNumberBox">
+					<div class="walletEmailNumberInputBox">
+						<p class="walletEmailNumberPlaceHolder">EMAIL ADDRESS</p>
+						<div class="InputBoxHeight">
+							<input class="walletEmailNumberInput" type="text" />
+						</div>
 					</div>
 				</div>
-				
-			</div>	
-			<div class="checkOutBody2" style="display:none">
-				<img src="" class="errorImg" />
+				<div class="poweredByCitrusBox">
+					<img class="poweredByCitrusIcon" src="images/poweredByCitrus.jpg" />
+					<p><span class="tac">Terms & Conditions</span></p>
+				</div>
+				<div class="buttonBox">
+					<button class="walletButton" onclick="change('1');">GET STARTED</button>
+				</div>
 			</div>
-			<button id="" class="checkOutBtn" >
-				<span>Pay 1 Rs</span>
-			</button>
-			<button id="retry" class="checkOutBtn2" onclick="backToCheckout()" style="display:none">
-				<span></span>
-			</button>
-			<div class="checkOutShadow" style="display:block">
+<!-- eSign in------------------------------------------------------------------------------------------------------ -->
+			<div class="eSignIn page" style="display:none;">
+				<div class="walletHeader">
+					<span class="walletHeaderTxt">Sign In</span>
+				</div>
+				<div class="eSignInMsgBox">
+					<p class="eSignInMsg">Congratulations, we have found a Citrus <br>account which matches this email address</p>
+					<p class="eSignInE">jaysinh.go@gmail.com</p>
+					<p class="eSignInM">+91-9512222151</p>
+				</div>
+				<div class="eOtpBox" >
+					<div class="eOtpInputBox">
+						<div class="eOtpInputInnerBox">
+							<p class="eOtpInputPlaceHolder">EMAIL OTP</p>
+							<div class="eOtpInputBoxHeight">
+								<input class="eOtpInput" type="password" autofocus />
+							</div>							
+							<p class="eOtpMsg">An email OTP has been sent to jaysinh.go@gmail.com</p>
+							<div>
+								<p class="or">
+									OR
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="eCitrusPasswordInputBox" style="margin:0px;">
+						<div class="eCitrusPasswordInputInnerBox">
+							<p class="eCitrusPasswordPlaceHolder">CITRUS PASSWORD</p>
+							<div class="eCitrusPasswordInputBoxHeight">
+								<input class="eCitrusPasswordInput" type="password" />
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="buttonBox">
+					<button class="walletButton" onclick="change('2');">SIGN IN</button>
+				</div>
 			</div>
-		</div>		
-		<script src="http://code.jquery.com/jquery-2.1.1.min.js" > </script>
-		<script src="js/citrus.js" > </script>	
-		<script src="js/checkout.js" > </script>
-		<script src="js/config.js" > </script>		
-		<script src="https://icp.citruspay.com/js/jquery.payment.min.js" > </script>		
-		<script>
-			
-			window.onmessage = function(e){	
-				var userDetails = JSON.parse(e.data);
-				var iframeRemoval=userDetails.removeIF;
-				$("#citrusMerchantTxnId").val(userDetails.txnId);
-				$("#citrusAmount").val(userDetails.orderAmount);
-				$("#citrusSignature").val(userDetails.requestSignature);
-				$("#citrusReturnUrl").val(userDetails.returnUrl);
-			}
-				
-			function citrusServerErrorMsg(errorResponse) {        				 
-				$("#citrusErrorMessage").html(errorResponse.txMsg);        				 
-			}
-			function citrusClientErrMsg(errorResponse) {        				 
-				$("#citrusErrorMessage").html(errorResponse);
-			}
-					
-
-		</script>
-		<script src="js/checkOutDemo.js"></script>
-		
+<!-- mSign in------------------------------------------------------------------------------------------------------ -->
+			<div class="mSignIn page" style="display:none;">
+				<div class="walletHeader">
+					<span class="walletHeaderTxt">Sign In</span>
+				</div>
+				<div class="mSignInMsgBox">
+					<p class="mSignInMsg">Congratulations, we have found a Citrus <br>account which matches this mobile number</p>
+					<p class="mSignInM">+91-9512222151</p>
+					<p class="mSignInE">jaysinh.go@gmail.com</p>
+				</div>
+				<div class="mOtpBox" >
+					<div class="mOtpInputBox">
+						<div class="mOtpInputInnerBox">
+							<p class="mOtpInputPlaceHolder">MOBILE OTP</p>
+							<div class="mOtpInputBoxHeight">
+								<span class="ReSendOtp">RE-SENT OTP</span>
+								<input class="mOtpInput" type="password" autofocus />
+							</div>							
+							<p class="mOtpMsg">An OTP has been sent to your mobile number<br> +91-9512222151</p>
+							<div>
+								<p class="or">
+									OR
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="mCitrusPasswordInputBox" style="margin:0px;">
+						<div class="mCitrusPasswordInputInnerBox">
+							<p class="mCitrusPasswordPlaceHolder">CITRUS PASSWORD</p>
+							<div class="mCitrusPasswordInputBoxHeight">
+								<input class="mCitrusPasswordInput" type="password" />
+							</div>							
+						</div>
+					</div>
+				</div>
+				<div class="buttonBox">
+					<button class="walletButton" onclick="change('3');">SIGN IN</button>
+				</div>
+			</div>
+<!-- sign up------------------------------------------------------------------------------------------------------ -->
+			<div class="signUp page" style="display:none;">
+				<div class="walletHeader">
+					<span class="walletHeaderTxt">Sign Up</span>
+				</div>
+				<div class="SignUpMsgBox">
+					<p class="SignUpMsg">Thank you! We are creating Citrus account<br>for you with the following details</p>
+					<p class="SignUpM">+91-9512222151</p>
+					<p class="SignUpE">jaysinh.go@gmail.com</p>
+					<button class="changeBtn">CHANGE</button>
+				</div>
+				<div class="signUpOtpBox" >
+					<div class="signUpMOtpInputBox">
+						<div class="signUpMOtpInputInnerBox">
+							<p class="signUpMOtpInputPlaceHolder">MOBILE OTP</p>
+							<div class="signUpMOtpInputBoxHeight">
+								<span class="ReSendOtp">RE-SENT OTP</span>
+								<input class="signUpMOtpInput" type="password" autofocus />
+							</div>							
+							<p class="signUpMOtpMsg">An OTP has been sent to your mobile number<br> +91-9512222151</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="buttonBox">
+					<button class="walletButton" onclick="change('4');">SIGN UP</button>
+				</div>
+			</div>
 		</div>
-
+		<script src="js/change.js"></script>		
 	</body>
 </html>
