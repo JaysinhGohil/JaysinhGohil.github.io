@@ -6,7 +6,7 @@ body{
 	font-size: 12px;
 	font-style: normal;
 	font-family:arial,sans-serif;
-	background: rgb(142, 142, 142);
+    background: rgba(1,1,1,0.2);
 }
 .citrusWalletBox{
 	margin: auto;
@@ -15,6 +15,7 @@ body{
 	width:360px;
 	height:560px;
 	background:#ffffff;
+	box-shadow: 0 0px 50px 0px rgba(1, 1, 1, 0.3);
 }
 .myWallet,.eSignIn,.mSignIn,.signUp{
 	height:100%;
