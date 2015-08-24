@@ -13,7 +13,7 @@ body{
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	width:360px;
-	height:560px;
+	height: 520px;
 	background:#ffffff;
 	box-shadow: 0 0px 50px 0px rgba(1, 1, 1, 0.3);
 }
@@ -96,7 +96,11 @@ body{
 	bottom:80px;
 }
 .poweredByCitrusIcon{
-	width:110px;
+	width:90px;
+}
+.tac{
+	font-size:10px;
+	color: #4e4e4e;
 }
 .buttonBox{
 	text-align:center;
@@ -107,7 +111,7 @@ body{
 .walletButton{
 	margin:0 auto;
 	width:90%;
-	height:40px;
+	padding: 10px 0;
 	outline:0;
 	border:0;
 	background:#F9A323;
