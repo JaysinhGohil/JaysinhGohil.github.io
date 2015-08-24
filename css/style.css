@@ -13,7 +13,7 @@ body{
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
 	width:360px;
-	height: 520px;
+	height: 540px;
 	background:#ffffff;
 	box-shadow: 0 0px 50px 0px rgba(1, 1, 1, 0.3);
 }
@@ -202,6 +202,7 @@ body{
 	.citrusWalletBox{
 		margin:0;
 		top:0;
-		width:100%;
+		width:100%;		
+		height: 540px;
 	}
 }
