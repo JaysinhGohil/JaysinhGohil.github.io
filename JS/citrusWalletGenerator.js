@@ -7,7 +7,7 @@ function walletGenerator(U){
 		citrusIframe.setAttribute("style", "display:block;position:fixed;width:100%;height:100%;height:100vh;left:0;top:0;z-index:10000;overflow:hidden;");  		 
 		document.getElementsByTagName("body")[0].appendChild(citrusIframe);  
 		document.getElementById('walletIframeId').src = URL;		
-		document.walletForm.target = "walletIframeId"
+		document.walletForm.target = "walletIframeId";
 		document.walletForm.action = URL; 
 		document.walletForm.method = 'POST';
 		document.walletForm.submit();
