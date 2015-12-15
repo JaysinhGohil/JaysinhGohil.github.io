@@ -31,6 +31,5 @@ eventer(messageEvent,function(e) {
 	if(data == 'closeWallet'){
 		var close = document.getElementById("walletIframeId");
 		close.parentNode.removeChild(close);
-		document.body.removeChild(close);
 	}
 },false);
