@@ -1,7 +1,8 @@
 var citrusWallet = (function(){
-	
-	function launchWallet(U){
-			var URL = U || "https://wallet.citruspay.com/wallet/showlogin";
+	var configObj;
+	function launchWallet(confObj){
+			confObj && (configObj = confObj);
+			var URL = confObj && confObj.walletUrl|| "https://wallet.citruspay.com/wallet/showlogin";
 			if(screen.width > 751 ) {
 				var citrusIframe = document.createElement("iframe");
 				citrusIframe.id = 'walletIframeId';
@@ -30,9 +31,11 @@ var citrusWallet = (function(){
 		eventer(messageEvent,function(e) {
 			var key = e.message ? "message" : "data";
 			var data = e[key];
-			if(data == 'closeWallet'){
+			if(data == 'closeCitrusWallet'){
 				var close = document.getElementById("walletIframeId");
 				close.parentNode.removeChild(close);
+			}else if(data === 'citrusWalletLaunched'){
+				configObj && configObj.walletLaunchHandler && configObj.walletLaunchHandler({message: 'Citrus wallet launched'});
 			}
 		},false);
 		
